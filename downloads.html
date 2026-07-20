@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="si" class="lang-si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads | Dept. of Social Welfare, Probation & Child Care Services - Southern Province</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandIndigo: '#4f46e5',
+            brandPink: '#ec4899',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Header Anchor -->
+  <header id="global-header"></header>
+
+  <!-- Banner - pt-28 added for floating menu offset -->
+  <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-[#120e2e] text-white pt-28 pb-16 px-4 md:px-8 text-center relative overflow-hidden gov-pattern">
+    <div class="max-w-7xl mx-auto space-y-4 relative z-10">
+      <span class="text-xs uppercase tracking-widest text-indigo-400 font-black">
+        <span data-lang="si">අයදුම්පත් සහ චක්‍රලේඛ බාගත කිරීමේ මධ්‍යස්ථානය</span>
+        <span data-lang="en">Application Forms & Circulars Download Center</span>
+        <span data-lang="ta">விண்ணப்பப் படிவங்கள் மற்றும் சுற்றறிக்கைகள் பதிவிறக்க மையம்</span>
+      </span>
+      <h1 class="text-3xl md:text-5xl font-black font-display tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
+        <span data-lang="si">බාගත කිරීම්</span>
+        <span data-lang="en">Downloads</span>
+        <span data-lang="ta">பதிவிறக்கங்கள்</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Downloads Search & Filter Section -->
+  <main class="max-w-6xl mx-auto px-4 md:px-8 py-16 flex-1 w-full space-y-8">
+    
+    <!-- Controls -->
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm">
+      <div class="w-full md:max-w-md">
+        <input type="text" id="dl-search-input" onkeyup="filterDownloads()" placeholder="Search form or circular name..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500 text-sm font-sans">
+      </div>
+      
+      <div class="flex gap-2 w-full md:w-auto overflow-x-auto">
+        <button onclick="filterCategory('all')" id="cat-all" class="cat-btn px-4 py-2 bg-indigo-650 text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap">All Files</button>
+        <button onclick="filterCategory('form')" id="cat-form" class="cat-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors whitespace-nowrap">Applications</button>
+        <button onclick="filterCategory('circular')" id="cat-circular" class="cat-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors whitespace-nowrap">Circulars & Acts</button>
+      </div>
+    </div>
+
+    <!-- Downloads Listing Table/Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="downloads-grid">
+      <!-- File 1 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-red-500">
+            <span class="text-2xl">📄</span>
+            <span class="text-[10px] uppercase bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-extrabold px-2 py-0.5 rounded font-sans">Application Form</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">වැඩිහිටි හැඳුනුම්පත සඳහා වන අයදුම්පත</span>
+            <span data-lang="en">Elder Identity Card Application Form</span>
+            <span data-lang="ta">முதியோர் அடையாள அட்டைக்கான விண்ணப்பம்</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (180 KB)</span>
+            <span>🌐 Sinhala / English</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-EL-01</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- File 2 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-red-500">
+            <span class="text-2xl">📄</span>
+            <span class="text-[10px] uppercase bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-extrabold px-2 py-0.5 rounded font-sans">Application Form</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">ආබාධිත මාසික දීමනා අයදුම්පත</span>
+            <span data-lang="en">Monthly Disability Allowance Application</span>
+            <span data-lang="ta">மாற்றுத்திறனாளிகளுக்கான மாத உதவித்தொகை விண்ணப்பம்</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (245 KB)</span>
+            <span>🌐 Sinhala / English / Tamil</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-DA-02</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- File 3 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-red-500">
+            <span class="text-2xl">📄</span>
+            <span class="text-[10px] uppercase bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-extrabold px-2 py-0.5 rounded font-sans">Application Form</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">දිවා සුරැකුම් මධ්‍යස්ථාන බලපත්‍ර අයදුම්පත</span>
+            <span data-lang="en">Early Daycare Center Registration Form</span>
+            <span data-lang="ta">பகல்நேர சிறுவர் காப்பகப் பதிவுக்கான விண்ணப்பம்</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (320 KB)</span>
+            <span>🌐 Sinhala / English</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-PC-DC-05</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- File 4 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-red-500">
+            <span class="text-2xl">📄</span>
+            <span class="text-[10px] uppercase bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-extrabold px-2 py-0.5 rounded font-sans">Application Form</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">ළමා දරුකමට හදාගැනීමේ ලියාපදිංචි අයදුම්පත</span>
+            <span data-lang="en">Child Adoption Registration Request Form</span>
+            <span data-lang="ta">பிள்ளை தத்தெடுப்புப் பதிவுக்கான விண்ணப்பம்</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (410 KB)</span>
+            <span>🌐 Sinhala / English</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-PC-AD-07</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- File 5 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-[#0b3c48]">
+            <span class="text-2xl">📕</span>
+            <span class="text-[10px] uppercase bg-sky-100 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 font-extrabold px-2 py-0.5 rounded font-sans">Official Circular</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">ළමා හිමිකම් සහ ආරක්ෂණ ප්‍රඥප්තිය - 2026</span>
+            <span data-lang="en">Provincial Child Protection Act - 2026</span>
+            <span data-lang="ta">மாகாண சிறுவர் பாதுகாப்புச் சட்டம் - 2026</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (1.2 MB)</span>
+            <span>🌐 Sinhala / English / Tamil</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-GOV-CIRC-11</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- File 6 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-[#0b3c48]">
+            <span class="text-2xl">📕</span>
+            <span class="text-[10px] uppercase bg-sky-100 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 font-extrabold px-2 py-0.5 rounded font-sans">Official Circular</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-800 dark:text-white download-title">
+            <span data-lang="si">ප්‍රජා සුබසාධන නිලධාරීන්ගේ රාජකාරි ව්‍යවස්ථාව</span>
+            <span data-lang="en">Social Officers Operational Guidelines Code</span>
+            <span data-lang="ta">சமூக சேவை உத்தியோகத்தர்களுக்கான வழிகாட்டி</span>
+          </h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400 font-sans">
+            <span>💾 PDF (620 KB)</span>
+            <span>🌐 Sinhala</span>
+          </div>
+        </div>
+        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+          <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-CIRC-04</span>
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+            <span>📥 Download</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Anchor -->
+  <footer id="global-footer"></footer>
+
+  <!-- Core Javascript -->
+  <script src="js/main.js"></script>
+
+  <!-- Filter & Search Logic -->
+  <script>
+    let activeCategory = 'all';
+
+    function filterCategory(category) {
+      activeCategory = category;
+
+      // Update button colors
+      const buttons = document.querySelectorAll('.cat-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-indigo-650', 'text-white');
+        btn.classList.add('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
+      });
+
+      const selectedBtn = document.getElementById(`cat-${category}`);
+      selectedBtn.classList.remove('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
+      selectedBtn.classList.add('bg-indigo-650', 'text-white');
+
+      filterDownloads();
+    }
+
+    function filterDownloads() {
+      const searchVal = document.getElementById('dl-search-input').value.toLowerCase();
+      const cards = document.querySelectorAll('.download-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.download-title').innerText.toLowerCase();
+        const category = card.getAttribute('data-category');
+
+        const matchesSearch = title.includes(searchVal);
+        const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+
+        if (matchesSearch && matchesCategory) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

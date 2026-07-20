@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="si" class="lang-si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Dept. of Social Welfare, Probation & Child Care Services - Southern Province</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandIndigo: '#4f46e5',
+            brandPink: '#ec4899',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Floating Header Anchor -->
+  <header id="global-header"></header>
+
+  <!-- Main Hero Section (Dynamic Slider) - Offsets added for floating header (pt-24) -->
+  <section class="slider-container relative h-[500px] md:h-[600px] bg-gradient-to-br from-indigo-950 via-slate-900 to-[#120e2e] overflow-hidden pt-24">
+    <!-- Overlay Wave Design Pattern -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-10 gov-pattern pointer-events-none"></div>
+
+    <!-- Slide 1: Social Welfare -->
+    <div class="slide active flex items-center h-full px-6 md:px-16" id="slide-1">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Content -->
+        <div class="space-y-6 text-white reveal active">
+          <span class="bg-brandPink text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider inline-block shadow-sm">
+            <span data-lang="si">සමාජ සුබසාධනය</span>
+            <span data-lang="en">Social Welfare</span>
+            <span data-lang="ta">சமூக நலன்புரி</span>
+          </span>
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
+            <span data-lang="si">ජීවිත නංවමු,<br>සෙනෙහස බෙදා දෙමු</span>
+            <span data-lang="en">Empowering Lives,<br>Extending Care</span>
+            <span data-lang="ta">வாழ்வை மேம்படுத்தி,<br>அன்பை பகிர்வோம்</span>
+          </h1>
+          <p class="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed font-sans">
+            <span data-lang="si">අසරණ වැඩිහිටියන්, විශේෂ අවශ්‍යතා සහිත තැනැත්තන් සහ අවදානමට ලක්වූ පවුල් සඳහා සුබසාධන ආධාර සැපයීම සහ ඔවුන්ගේ ජීවන තත්ත්වය උසස් කිරීම අපගේ අරමුණයි.</span>
+            <span data-lang="en">Providing assistance, tools, and social grants for elders, disabled citizens, and low-income families in the Southern Province to uplift their livelihoods.</span>
+            <span data-lang="ta">தென் மாகாணத்தில் முதியோர்கள், மாற்றுத்திறனாளிகள் மற்றும் வறிய குடும்பங்களின் வாழ்வாதாரத்தை மேம்படுத்துவதற்காக சமூக நலன்புரி உதவிகள் வழங்குதல்.</span>
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="services.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-indigo-650/40">
+              <span data-lang="si">සේවා ගවේෂණය</span>
+              <span data-lang="en">Explore Services</span>
+              <span data-lang="ta">சேவைகளை ஆராய்க</span>
+            </a>
+            <a href="downloads.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+              <span data-lang="si">අයදුම්පත් බාගත කරන්න</span>
+              <span data-lang="en">Download Applications</span>
+              <span data-lang="ta">பதிவிறக்கங்கள்</span>
+            </a>
+          </div>
+        </div>
+        <!-- Image Graphic -->
+        <div class="hidden lg:flex justify-center">
+          <div class="relative w-[420px] h-[340px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 glow-primary bg-slate-800 transition-transform duration-500 hover:scale-105">
+            <img src="assets/hero-welfare.png" alt="Welfare" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Child Probation & Protection -->
+    <div class="slide flex items-center h-full px-6 md:px-16" id="slide-2">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Content -->
+        <div class="space-y-6 text-white">
+          <span class="bg-indigo-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider inline-block">
+            <span data-lang="si">පරිවාස හා ළමාරක්ෂක සේවා</span>
+            <span data-lang="en">Probation & Child Care</span>
+            <span data-lang="ta">நன்னடத்தை & சிறுவர் பராமரிப்பு</span>
+          </span>
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-slate-100 to-rose-200 bg-clip-text text-transparent">
+            <span data-lang="si">සෑම දරුවෙකුටම<br>ආරක්ෂිත හෙටක්</span>
+            <span data-lang="en">A Safe & Secure<br>Future for Every Child</span>
+            <span data-lang="ta">ஒவ்வொரு குழந்தைக்கும்<br>பாதுகாப்பான எதிர்காலம்</span>
+          </h1>
+          <p class="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed font-sans">
+            <span data-lang="si">පළාතේ සෑම දරුවෙකුගේම අයිතිවාසිකම් රැකගැනීම, සුරක්ෂිතභාවය සහ පරිවාස රැකවරණය අවැසි දරුවන් පුනරුත්ථාපනය කොට සමාජගත කිරීමේ උතුම් මෙහෙවර.</span>
+            <span data-lang="en">Protecting children, promoting child development, monitoring childcare institutions, and offering probation services to ensure a caring environment for every child.</span>
+            <span data-lang="ta">குழந்தைகளைப் பாதுகாத்தல், சிறுவர் அபிவிருத்தியை மேம்படுத்தல் மற்றும் நன்னடத்தை கண்காணிப்பு சேவைகளை தென் மாகாணத்தில் வழங்குதல்.</span>
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="services.html" class="bg-brandPink hover:bg-rose-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-pink-500/40">
+              <span data-lang="si">සේවා ගවේෂණය</span>
+              <span data-lang="en">Explore Services</span>
+              <span data-lang="ta">சேவைகளை ஆராய்க</span>
+            </a>
+            <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+              <span data-lang="si">හදිසි උපකාර</span>
+              <span data-lang="en">Emergency Help</span>
+              <span data-lang="ta">அவசர உதவி</span>
+            </a>
+          </div>
+        </div>
+        <!-- Image Graphic -->
+        <div class="hidden lg:flex justify-center">
+          <div class="relative w-[420px] h-[340px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 glow-secondary bg-slate-800 transition-transform duration-500 hover:scale-105">
+            <img src="assets/hero-childcare.png" alt="Childcare" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Dots Controls -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <button onclick="setSlide(0)" id="dot-0" class="w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
+      <button onclick="setSlide(1)" id="dot-1" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
+    </div>
+  </section>
+
+  <!-- Quick Action & Stats Dashboard -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 -mt-10 relative z-30">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-850 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="space-y-1">
+        <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="2500">0+</span>
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
+          <span data-lang="si">සුරක්ෂිත කළ දරුවන්</span>
+          <span data-lang="en">Children Protected</span>
+          <span data-lang="ta">பாதுகாக்கப்பட்ட குழந்தைகள்</span>
+        </p>
+      </div>
+      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+        <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="120">0+</span>
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
+          <span data-lang="si">වැඩිහිටි නිවාස සංඛ්‍යාව</span>
+          <span data-lang="en">Registered Elder Homes</span>
+          <span data-lang="ta">பதிவுசெய்யப்பட்ட முதியோர் இல்லங்கள்</span>
+        </p>
+      </div>
+      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+        <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="85">0+</span>
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
+          <span data-lang="si">ළමා සුරැකුම් මධ්‍යස්ථාන</span>
+          <span data-lang="en">Daycare Centers</span>
+          <span data-lang="ta">சிறுவர் பராமரிப்பு நிலையங்கள்</span>
+        </p>
+      </div>
+      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+        <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="15000">0+</span>
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
+          <span data-lang="si">ප්‍රතිලාභී පවුල් ප්‍රමාණය</span>
+          <span data-lang="en">Beneficiary Families</span>
+          <span data-lang="ta">பயனடைந்த குடும்பங்கள்</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome / Commissioner Message -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-4 flex justify-center reveal">
+      <div class="relative w-64 h-64 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl zoom-img-container">
+        <img src="assets/commissioner.png" alt="Provincial Commissioner" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent text-center pt-8 pb-3">
+          <span class="text-indigo-400 text-xs font-black uppercase tracking-widest font-sans">Provincial Commissioner</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lg:col-span-8 space-y-6 reveal">
+      <h2 class="text-2xl md:text-3.5xl font-black text-slate-800 dark:text-indigo-400 leading-snug">
+        <span data-lang="si">කොමසාරිස්තුමාගේ පිළිගැනීමේ පණිවිඩය</span>
+        <span data-lang="en">Welcome Address from the Commissioner</span>
+        <span data-lang="ta">மாகாண ஆணையாளரின் வரவேற்பு உரை</span>
+      </h2>
+      <div class="h-1.5 w-24 bg-brandPink rounded-full"></div>
+      
+      <div class="text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed font-sans text-sm md:text-[15px]">
+        <p>
+          <span data-lang="si">ආයුබෝවන්! දකුණු පළාත් සමාජ සුබසාධන, පරිවාස හා ළමාරක්ෂක සේවා දෙපාර්තමේන්තුවේ නිල වෙබ් අඩවියට ඔබ සාදරයෙන් පිළිගනිමු.</span>
+          <span data-lang="en">Welcome to the official web portal of the Department of Social Welfare, Probation, and Child Care Services of the Southern Province.</span>
+          <span data-lang="ta">தென் மாகாண சமூக நலன்புரி, நன்னடத்தை மற்றும் சிறுவர் பராமரிப்புச் சேவைகள் திணைக்களத்தின் உத்தியோகபூர்வ இணையத்தளத்திற்கு உங்களை வரவேற்கிறோம்.</span>
+        </p>
+        <p>
+          <span data-lang="si">අප දෙපාර්තමේන්තුව දකුණු පළාතේ සමාජීය රැකවරණය අවශ්‍ය වන ප්‍රජාව, විශේෂයෙන්ම අනාරක්‍ෂිත දරුවන්, ආබාධිත පුරවැසියන් සහ ජ්‍යෙෂ්ඨ වැඩිහිටියන්ගේ සුරක්‍ෂිතතාවය උදෙසා නීතිමය හා සුබසාධන සේවා රාශියක් ඉටුකරනු ලබයි. මෙම වෙබ් අඩවිය මඟින් අපගේ සියලුම සේවාවන් පිළිබඳ තොරතුරු සහ ඊට අදාළ අයදුම්පත් පහසුවෙන් ලබා ගැනීමට අවස්ථාව සලසා දී ඇත.</span>
+          <span data-lang="en">Our department plays a pivotal role in implementing legal protection and welfare services for individuals requiring care, with a special emphasis on vulnerable children, disabled citizens, and elder welfare in the Southern Province. We aim to make our services transparent and readily accessible through this portal.</span>
+          <span data-lang="ta">தென் மாகாணத்தில் உள்ள பாதிக்கப்படக்கூடிய குழந்தைகள், மாற்றுத்திறனாளிகள் மற்றும் முதியோர்களின் நலனுக்காக சட்டப் பாதுகாப்பு மற்றும் சமூக உதவிச் சேவைகளை எமது திணைக்களம் முன்னெடுத்து வருகின்றது.</span>
+        </p>
+      </div>
+
+      <div class="pt-2 font-display">
+        <h4 class="font-bold text-slate-800 dark:text-white">A. K. G. S. Prasadini</h4>
+        <p class="text-xs text-slate-450 dark:text-slate-500 font-sans">
+          <span data-lang="si">පළාත් කොමසාරිස්, සමාජ සුබසාධන, පරිවාස හා ළමාරක්ෂක සේවා</span>
+          <span data-lang="en">Provincial Commissioner, Social Welfare, Probation & Child Care Services</span>
+          <span data-lang="ta">மாகாண ஆணையாளர், சமூக நலன்புரி, நன்னடத்தை மற்றும் சிறுவர் பராமரிப்புச் சேவைகள்</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Quick Grid -->
+  <section class="bg-slate-100 dark:bg-slate-900/60 py-20 px-4 md:px-8 grid-bg">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="text-center space-y-4">
+        <h2 class="text-2xl md:text-4xl font-black text-slate-800 dark:text-indigo-400">
+          <span data-lang="si">අපගේ ප්‍රධාන සේවා අංශ</span>
+          <span data-lang="en">Our Core Service Areas</span>
+          <span data-lang="ta">எமது முக்கிய சேவைப் பிரிவுகள்</span>
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-xs md:text-sm font-sans">
+          <span data-lang="si">දෙපාර්තමේන්තුව මඟින් ප්‍රධාන අංශ තුනක් යටතේ ජනතාවට සහන සහ නීතිමය සේවා සපයයි.</span>
+          <span data-lang="en">The department operates under three major pillars to secure and support the citizens of the Southern Province.</span>
+          <span data-lang="ta">தென் மாகாண மக்களுக்கு சேவைகளை வழங்குவதற்காக திணைக்களம் மூன்று முக்கிய பிரிவுகளின் கீழ் இயங்குகிறது.</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1: Probation & Care -->
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+          <div class="space-y-4">
+            <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-3xl">🧸</div>
+            <h3 class="text-xl font-extrabold text-slate-850 dark:text-white leading-snug">
+              <span data-lang="si">ළමා සංවර්ධන හා පරිවාස</span>
+              <span data-lang="en">Child Development & Probation</span>
+              <span data-lang="ta">சிறுவர் அபிவிருத்தி & நன்னடத்தை</span>
+            </h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-sans leading-relaxed">
+              <span data-lang="si">අනාරක්ෂිත සහ අතහැර දැමූ දරුවන් ළමා නිවාස ගත කිරීම, පරිවාස පාලනය, නීතිමය උපකාර සහ දරුකමට හදාගැනීමේ ක්‍රියාවලිය අධීක්ෂණය කිරීම.</span>
+              <span data-lang="en">Overseeing child adoption systems, monitoring childcare institutes, managing children under probation custody, and organizing child rights awareness programs.</span>
+              <span data-lang="ta">சிறுவர் தத்தெடுப்பு, சிறுவர் இல்லங்களை மேற்பார்வை செய்தல் மற்றும் நன்னடத்தைக் கண்காணிப்பு சேவைகளை வழங்குதல்.</span>
+            </p>
+          </div>
+          <a href="services.html#childcare" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 font-bold text-xs pt-6 inline-flex items-center space-x-1.5 self-start group/btn">
+            <span>Read More</span>
+            <span class="transition-transform duration-300 group-hover/btn:translate-x-1">➔</span>
+          </a>
+        </div>
+
+        <!-- Card 2: Social Welfare -->
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+          <div class="space-y-4">
+            <div class="w-14 h-14 bg-pink-500/10 text-brandPink rounded-2xl flex items-center justify-center text-3xl">🤝</div>
+            <h3 class="text-xl font-extrabold text-slate-850 dark:text-white leading-snug">
+              <span data-lang="si">සමාජ සුබසාධන සේවා</span>
+              <span data-lang="en">Social Welfare Services</span>
+              <span data-lang="ta">சமூக நலன்புரிச் சேவைகள்</span>
+            </h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-sans leading-relaxed">
+              <span data-lang="si">විශේෂ අවශ්‍යතා සහිත තැනැත්තන්ට ආධාර, වෘත්තීය පුහුණු ශිෂ්‍යත්ව, වැඩිහිටි හැඳුනුම්පත් සැපයීම සහ ස්වයං රැකියා මූල්‍යාධාර ක්‍රියාත්මක කිරීම.</span>
+              <span data-lang="en">Offering monthly disability aid, organizing vocational training grants, issuing elder ID cards, and allocating self-employment financial grants.</span>
+              <span data-lang="ta">மாற்றுத்திறனாளிகளுக்கான உதவித்தொகை, முதியோர் அடையாள அட்டை மற்றும் சுயதொழில் நிதியுதவிகளை வழங்குதல்.</span>
+            </p>
+          </div>
+          <a href="services.html#welfare" class="text-brandPink hover:text-rose-500 font-bold text-xs pt-6 inline-flex items-center space-x-1.5 self-start group/btn">
+            <span>Read More</span>
+            <span class="transition-transform duration-300 group-hover/btn:translate-x-1">➔</span>
+          </a>
+        </div>
+
+        <!-- Card 3: Community Development -->
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+          <div class="space-y-4">
+            <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-3xl">🏛️</div>
+            <h3 class="text-xl font-extrabold text-slate-855 dark:text-white leading-snug">
+              <span data-lang="si">ප්‍රාදේශීය මට්ටමේ මෙහෙයුම්</span>
+              <span data-lang="en">Divisional Services</span>
+              <span data-lang="ta">பிரதேச செயலக சேவைகள்</span>
+            </h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-sans leading-relaxed">
+              <span data-lang="si">දකුණු පළාතේ සියලුම ප්‍රාදේශීය ලේකම් කොට්ඨාශ මට්ටමින් ළමා හිමිකම් ප්‍රවර්ධන නිලධාරීන් සහ සුබසාධන නිලධාරීන්ගේ සේවා සම්බන්ධීකරණය.</span>
+              <span data-lang="en">Direct community guidance, local counseling services, and home-based welfare checkups executed by divisional child-rights and social welfare officers.</span>
+              <span data-lang="ta">தென் மாகாண பிரதேச செயலக மட்டத்தில் சிறுவர் உரிமைகள் மேம்பாட்டு உத்தியோகத்தர்களின் சேவைகளை ஒருங்கிணைத்தல்.</span>
+            </p>
+          </div>
+          <a href="about.html#offices" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 font-bold text-xs pt-6 inline-flex items-center space-x-1.5 self-start group/btn">
+            <span>Read More</span>
+            <span class="transition-transform duration-300 group-hover/btn:translate-x-1">➔</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Helpline Call-To-Action Banner (New Section) -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-10 reveal">
+    <div class="cta-helpline-bg rounded-3xl p-8 md:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8 border border-white/5">
+      <div class="space-y-4 max-w-2xl text-center lg:text-left">
+        <span class="bg-red-500/20 text-red-300 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider inline-block">
+          <span data-lang="si">හදිසි සහන සේවා</span>
+          <span data-lang="en">Emergency Helplines</span>
+          <span data-lang="ta">அவசர உதவி சேவைகள்</span>
+        </span>
+        <h2 class="text-2xl md:text-3.5xl font-black leading-tight tracking-tight font-display">
+          <span data-lang="si">ඔබට අපගේ සහය හෝ උපකාර අවශ්‍යද?</span>
+          <span data-lang="en">Do you require our immediate assistance or support?</span>
+          <span data-lang="ta">உங்களுக்கு எங்களின் உடனடி உதவி தேவைப்படுகிறதா?</span>
+        </h2>
+        <p class="text-slate-300 text-xs md:text-sm leading-relaxed font-sans">
+          <span data-lang="si">ළමා අතවර, හිංසන හෝ වැඩිහිටි සුබසාධන ගැටලු සඳහා පැය 24 පුරා නොමිලේ ක්‍රියාත්මක වන අපගේ හදිසි දුරකථන සේවාවන් අමතන්න.</span>
+          <span data-lang="en">Contact our toll-free 24/7 hotline service lines for reporting child protection issues or seeking elders welfare support directly.</span>
+          <span data-lang="ta">சிறுவர் விவகாரங்கள் அல்லது முதியோர் நலன் தொடர்பான புகார்களுக்கு எங்களின் அவசர தொலைபேசி சேவைகளை அழைக்கவும்.</span>
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto font-display">
+        <a href="tel:1929" class="bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-2xl text-center shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col justify-center">
+          <span class="text-2xl font-black">1929</span>
+          <span class="text-[9px] uppercase tracking-wider text-red-200 font-bold font-sans">Child Protection Hotline</span>
+        </a>
+        <a href="tel:1920" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-2xl text-center shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col justify-center">
+          <span class="text-2xl font-black">1920</span>
+          <span class="text-[9px] uppercase tracking-wider text-indigo-200 font-bold font-sans">Elders Assistance Desk</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Events Section -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 space-y-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div class="space-y-2">
+        <h2 class="text-2xl md:text-3.5xl font-black text-slate-800 dark:text-indigo-400 leading-snug">
+          <span data-lang="si">පුවත් සහ නිවේදන</span>
+          <span data-lang="en">News & Announcements</span>
+          <span data-lang="ta">செய்திகள் & அறிவிப்புகள்</span>
+        </h2>
+        <p class="text-slate-400 text-xs md:text-sm font-sans">
+          <span data-lang="si">දෙපාර්තමේන්තුවේ නවතම පුවත් සහ ඉදිරි වැඩසටහන් පිළිබඳව දැනුවත් වන්න.</span>
+          <span data-lang="en">Keep up-to-date with our local community events, circular releases, and training programs.</span>
+          <span data-lang="ta">எமது திணைக்களத்தின் அண்மைய செய்திகள் மற்றும் வரவிருக்கும் நிகழ்வுகள் பற்றி அறியுங்கள்.</span>
+        </p>
+      </div>
+      <a href="gallery.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs self-start md:self-auto transition-colors shadow shadow-indigo-600/35">
+        <span data-lang="si">සියලුම පුවත් බලන්න</span>
+        <span data-lang="en">View All News</span>
+        <span data-lang="ta">அனைத்து செய்திகளையும் பார்க்க</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- News 1 -->
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div>
+          <div class="h-52 zoom-img-container">
+            <img src="assets/news-child-rights.png" alt="Child Rights Protection Day" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-[10px] uppercase tracking-wider text-brandPink font-extrabold font-sans">Event | 2026.07.10</span>
+            <h4 class="font-bold text-slate-850 dark:text-white leading-snug">
+              <span data-lang="si">ළමා අයිතිවාසිකම් දින සැමරුම - ගාල්ල</span>
+              <span data-lang="en">Child Rights Protection Day - Galle</span>
+              <span data-lang="ta">சிறுவர் உரிமைகள் தினம் - காலி</span>
+            </h4>
+            <p class="text-slate-500 dark:text-slate-400 text-xs font-sans leading-relaxed">
+              <span data-lang="si">දකුණු පළාත් ළමුන්ගේ සහභාගීත්වයෙන් ළමා අයිතිවාසිකම් සුරැකීමේ විශේෂ වැඩසටහනක් ගාලු කොටුවේදී පැවැත්විණි.</span>
+              <span data-lang="en">A provincial child-rights awareness campaign was successfully completed at Galle Fort with children's workshops.</span>
+              <span data-lang="ta">மாகாண மட்ட சிறுவர் உரிமைகள் விழிப்புணர்வு கருத்தரங்கு காலி கோட்டையில் வெற்றிகரமாக நடைபெற்றது.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- News 2 -->
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div>
+          <div class="h-52 zoom-img-container">
+            <img src="assets/news-wheelchair.png" alt="Assistive Equipment Distribution" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-[10px] uppercase tracking-wider text-indigo-500 font-extrabold font-sans">Service | 2026.06.28</span>
+            <h4 class="font-bold text-slate-850 dark:text-white leading-snug">
+              <span data-lang="si">රෝද පුටු සහ ශ්‍රවණ උපකරණ බෙදාදීම</span>
+              <span data-lang="en">Assistive Equipment Distribution</span>
+              <span data-lang="ta">மாற்றுத்திறனாளிகளுக்கான உபகரணங்கள் வழங்கல்</span>
+            </h4>
+            <p class="text-slate-500 dark:text-slate-400 text-xs font-sans leading-relaxed">
+              <span data-lang="si">පළාතේ ආබාධිත පුරවැසියන් සඳහා නොමිලේ රෝද පුටු සහ අනෙකුත් උපකරණ තෝරාගත් ප්‍රතිලාභීන්ට බෙදාදීම සිදු කරන ලදී.</span>
+              <span data-lang="en">Special wheelchairs, walking aids, and hearing amplifiers were gifted to qualified disabled recipients.</span>
+              <span data-lang="ta">மாகாணத்திலுள்ள மாற்றுத்திறனாளிகளுக்கு சக்கர நாற்காலிகள் மற்றும் செவிப்புலன் கருவிகள் இலவசமாக வழங்கப்பட்டன.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- News 3 -->
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div>
+          <div class="h-52 zoom-img-container">
+            <img src="assets/news-caregiver.png" alt="Daycare Caregiver Certificate Program" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-extrabold font-sans">Training | 2026.06.15</span>
+            <h4 class="font-bold text-slate-850 dark:text-white leading-snug">
+              <span data-lang="si">ළමා සුරැකුම් පාලිකාවන් පුහුණු කිරීම</span>
+              <span data-lang="en">Daycare Caregiver Certificate Program</span>
+              <span data-lang="ta">சிறுவர் காப்பக பணியாளர்களுக்கான சான்றிதழ் பயிற்சி</span>
+            </h4>
+            <p class="text-slate-500 dark:text-slate-400 text-xs font-sans leading-relaxed">
+              <span data-lang="si">ළමා සුරැකුම් මධ්‍යස්ථාන සේවිකාවන් සඳහා දෙදින පුහුණු හා සහතික පත්‍ර ප්‍රදානය කිරීමේ වැඩමුළුව සාර්ථකව අවසන් විය.</span>
+              <span data-lang="en">A certified capacity-building session for local day-care center tutors and managers was held.</span>
+              <span data-lang="ta">மாகாணத்திலுள்ள சிறுவர் காப்பக ஊழியர்களுக்கான இருநாள் சான்றிதழ் விழிப்புணர்வு பயிற்சி வகுப்பு நிறைவுற்றது.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Anchor -->
+  <footer id="global-footer"></footer>
+
+  <!-- Core Javascript -->
+  <script src="js/main.js"></script>
+
+  <!-- Slider logic -->
+  <script>
+    let activeSlideIdx = 0;
+    const slides = [document.getElementById('slide-1'), document.getElementById('slide-2')];
+    const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
+
+    function setSlide(idx) {
+      slides[activeSlideIdx].classList.remove('active');
+      dots[activeSlideIdx].classList.remove('bg-white');
+      dots[activeSlideIdx].classList.add('bg-white/40');
+
+      activeSlideIdx = idx;
+
+      slides[activeSlideIdx].classList.add('active');
+      dots[activeSlideIdx].classList.remove('bg-white/40');
+      dots[activeSlideIdx].classList.add('bg-white');
+    }
+
+    // Auto rotate slides every 6s
+    setInterval(() => {
+      let nextIdx = (activeSlideIdx + 1) % slides.length;
+      setSlide(nextIdx);
+    }, 6000);
+
+    // Trigger statistics counts when scrolling near
+    let counted = false;
+    window.addEventListener('scroll', () => {
+      const statsSection = document.querySelector('.counter-val');
+      if (statsSection) {
+        const top = statsSection.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50 && !counted) {
+          counted = true;
+          window.animateNumbers();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

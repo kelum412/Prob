@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Tailwind custom styles or overrides can be placed here */
+:root {
+  /* Font Family definitions */
+  --font-display: 'Outfit', 'Noto Sans Sinhala', sans-serif;
+  --font-body: 'Inter', 'Noto Sans Sinhala', sans-serif;
+
+  /* HSL Colors - Modern Indigo/Violet Light Mode */
+  --primary-hue: 238;
+  --primary-sat: 83%;
+  --primary-light: 59%;
+  
+  --secondary-hue: 333;
+  --secondary-sat: 89%;
+  --secondary-light: 52%;
+
+  --bg-hue: 220;
+  --bg-sat: 25%;
+  --bg-light: 97%;
+
+  --card-hue: 0;
+  --card-sat: 0%;
+  --card-light: 100%;
+
+  --text-hue: 224;
+  --text-sat: 60%;
+  --text-light: 12%;
+
+  --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+  --secondary: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-light));
+  --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
+  --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
+  --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
+  --text-muted: hsl(220, 14%, 46%);
+  --border-color: rgba(99, 102, 241, 0.08);
+  --shadow-sm: 0 2px 4px rgba(99, 102, 241, 0.02);
+  --shadow-md: 0 8px 30px -2px rgba(99, 102, 241, 0.06);
+  --shadow-lg: 0 30px 60px -15px rgba(99, 102, 241, 0.1);
+}
+
+:root.dark {
+  /* HSL Colors - Modern Indigo/Violet Dark Mode */
+  --primary-light: 65%;
+  --secondary-light: 60%;
+  --bg-hue: 222;
+  --bg-sat: 47%;
+  --bg-light: 4%;
+  --card-hue: 222;
+  --card-sat: 47%;
+  --card-light: 9%;
+  --text-hue: 210;
+  --text-sat: 20%;
+  --text-light: 98%;
+
+  --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+  --secondary: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-light));
+  --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
+  --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
+  --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
+  --text-muted: hsl(217, 10%, 65%);
+  --border-color: rgba(255, 255, 255, 0.06);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 30px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Global resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-hue), var(--primary-sat), 35%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(var(--bg-card), 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Advanced Grid Background pattern */
+.grid-bg {
+  background-image: radial-gradient(rgba(15, 76, 92, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.dark .grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Interactive custom card hover effect */
+.interactive-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+}
+.interactive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary);
+}
+
+/* Language and theme transition animation rules */
+.lang-toggle-active {
+  background-color: var(--primary);
+  color: #fff !important;
+}
+
+/* Page specific scroll animations */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 40px -5px var(--primary);
+}
+.glow-secondary {
+  box-shadow: 0 0 40px -5px var(--secondary);
+}
+
+/* Multi-language Visibility Toggles */
+.lang-en [data-lang="si"], .lang-en [data-lang="ta"],
+.lang-si [data-lang="en"], .lang-si [data-lang="ta"],
+.lang-ta [data-lang="si"], .lang-ta [data-lang="en"] {
+  display: none !important;
+}
+
+/* Carousel/Slider styling */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Government badge pattern */
+.gov-pattern {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(15, 76, 92, 0.02) 10px,
+    rgba(15, 76, 92, 0.02) 20px
+  );
+}
+
+.dark .gov-pattern {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.01) 10px,
+    rgba(255, 255, 255, 0.01) 20px
+  );
+}
+
+/* ==========================================================================
+   Header Redesign & UX/UI Enhancements
+   ========================================================================== */
+
+/* Jitter-Free Nav Links with Sliding Underline */
+.nav-link {
+  position: relative;
+  font-weight: 500; /* Use medium weight consistently */
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 9999px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 700; /* Bold is fine, but since we define static spacing/flex widths or don't use heavy shifts, it works. Let's make it 600 (semi-bold) to keep shifts minimal, or just 600 for all */
+}
+
+/* Scroll-shrink class for navbar container */
+.nav-scrolled {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+.dark .nav-scrolled {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Scroll Progress indicator bar at the bottom of the header */
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  width: 0%;
+  transition: width 0.1s ease-out;
+  border-radius: 0 9999px 9999px 0;
+}
+
+/* Theme Button Rotate Anim */
+.theme-btn svg {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.theme-btn:hover svg {
+  transform: rotate(30deg) scale(1.1);
+}
+
+/* Smooth Slide-in Mobile Drawer overlay */
+#mobile-drawer {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-drawer.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+#mobile-drawer > div {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-drawer.active > div {
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   Advanced UI redesign: Floating to Sticky transition & Double Row Layout
+   ========================================================================== */
+
+/* Header Container Sticky Transition */
+.fixed-header-container {
+  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fixed-header-container.scrolled {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.fixed-header-container.scrolled nav {
+  border-radius: 0 0 1.25rem 1.25rem !important;
+  border-top-width: 0px !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.dark .fixed-header-container.scrolled nav {
+  background-color: rgba(10, 15, 30, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Glassmorphic border glow & background */
+.glass-nav {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(99, 102, 241, 0.12);
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.05), 0 5px 15px -5px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-nav {
+  background-color: rgba(13, 18, 36, 0.65);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation rows spacing transitions */
+.nav-divider {
+  border-top: 1px solid rgba(99, 102, 241, 0.08);
+  transition: all 0.3s ease;
+}
+
+.dark .nav-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-scrolled .nav-divider {
+  margin-top: 0.25rem !important;
+  padding-top: 0.25rem !important;
+}
+
+/* Commissioner Signature styling */
+.commissioner-sig {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Call to Action helpline banner gradient background */
+.cta-helpline-bg {
+  position: relative;
+  background: radial-gradient(circle at 10% 20%, rgb(18, 16, 50) 0%, rgb(12, 10, 31) 90%);
+  overflow: hidden;
+}
+
+.cta-helpline-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-helpline-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Image zoom grid animations */
+.zoom-img-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-img-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-img-container:hover img {
+  transform: scale(1.08);
+}
+
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="si" class="lang-si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Dept. of Social Welfare, Probation & Child Care Services - Southern Province</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandIndigo: '#4f46e5',
+            brandPink: '#ec4899',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Header Anchor -->
+  <header id="global-header"></header>
+
+  <!-- Banner - pt-28 added for floating menu offset -->
+  <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-[#120e2e] text-white pt-28 pb-16 px-4 md:px-8 text-center relative overflow-hidden gov-pattern">
+    <div class="max-w-7xl mx-auto space-y-4 relative z-10">
+      <span class="text-xs uppercase tracking-widest text-indigo-400 font-black">
+        <span data-lang="si">දෙපාර්තමේන්තු සේවා සහ වැඩසටහන් ඡායාරූප ගැලරිය</span>
+        <span data-lang="en">Department Events & Programs Photo Gallery</span>
+        <span data-lang="ta">திணைக்கள நிகழ்வுகள் மற்றும் திட்டங்கள் புகைப்படக் கூடம்</span>
+      </span>
+      <h1 class="text-3xl md:text-5xl font-black font-display tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
+        <span data-lang="si">ඡායාරූප ගැලරිය</span>
+        <span data-lang="en">Photo Gallery</span>
+        <span data-lang="ta">புகைப்படக் கூடம்</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Gallery Main Section -->
+  <main class="max-w-6xl mx-auto px-4 md:px-8 py-16 flex-1 w-full space-y-8">
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-2 justify-center border-b dark:border-slate-800 pb-6">
+      <button onclick="filterGallery('all')" id="btn-all" class="gal-btn px-4 py-2 bg-indigo-600 text-white text-xs font-bold rounded-lg transition-colors">Show All</button>
+      <button onclick="filterGallery('events')" id="btn-events" class="gal-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors">Events</button>
+      <button onclick="filterGallery('welfare')" id="btn-welfare" class="gal-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors">Donation Programs</button>
+      <button onclick="filterGallery('workshops')" id="btn-workshops" class="gal-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors">Workshops & Training</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+      <!-- Item 1 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="events" onclick="openLightbox('🧸', 'World Children\'s Day 2025', 'Celebrating rights and developmental opportunities for children across the Galle district.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">🧸</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Events</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">ලෝක ළමා දින සැමරුම</span>
+            <span data-lang="en">World Children's Day Celebration</span>
+            <span data-lang="ta">உலக குழந்தைகள் தின விழா</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="welfare" onclick="openLightbox('♿', 'Wheelchair Donation Program', 'Empowering local disabled citizens by providing vital mobility support equipment.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">♿</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Donation Programs</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">ආධාර උපකරණ බෙදාදීම</span>
+            <span data-lang="en">Wheelchair Donation Campaign</span>
+            <span data-lang="ta">சக்கர நாற்காலி வழங்கும் பிரச்சாரம்</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="workshops" onclick="openLightbox('🎓', 'Caregivers Training 2026', 'Empowering early childhood educators with NVQ aligned certification guides.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">🎓</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Workshops & Training</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">පෙරපාසල් ගුරු පුහුණු වැඩමුළුව</span>
+            <span data-lang="en">Daycare Caregiver Certificate Workshop</span>
+            <span data-lang="ta">சிறுவர் காப்பகப் பணியாளர் பயிற்சி</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="events" onclick="openLightbox('👵', 'Elders Sports Meet', 'Encouraging health and community interaction for our registered senior citizens in Galle.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">👵</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Events</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">වැඩිහිටි ක්‍රීඩා උත්සවය</span>
+            <span data-lang="en">Provincial Elders Sports Festival</span>
+            <span data-lang="ta">மாகாண முதியோர் விளையாட்டு விழா</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="welfare" onclick="openLightbox('🍲', 'Nutritional Aid Distribution', 'Supplying key nourishment packages for pregnant mothers and infant caretakers in low income categories.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">🍲</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Donation Programs</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">පෝෂණ මලු බෙදාදීම</span>
+            <span data-lang="en">Nutritional Food Packs Distribution</span>
+            <span data-lang="ta">ஊட்டச்சத்து உணவுப் பொதிகள் விநியோகம்</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group interactive-card aspect-[4/3] flex flex-col justify-end gal-item" data-type="workshops" onclick="openLightbox('⚖️', 'Child Rights Legal Seminar', 'Training officers on juvenile protection acts and legal enforcement parameters.')">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-15"></div>
+        <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-500">⚖️</div>
+        <div class="p-4 relative z-20 text-white space-y-1">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brandPink font-sans">Workshops & Training</span>
+          <h4 class="font-bold text-sm">
+            <span data-lang="si">ළමා අයිතිවාසිකම් නීති සම්මන්ත්‍රණය</span>
+            <span data-lang="en">Child Protection Legal Awareness Program</span>
+            <span data-lang="ta">சிறுவர் பாதுகாப்பு சட்ட விழிப்புணர்வு கருத்தரங்கு</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal Component -->
+  <div id="lightbox-modal" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/60 hover:text-white text-3xl focus:outline-none" aria-label="Close Lightbox">✕</button>
+    
+    <div class="max-w-3xl w-full flex flex-col items-center space-y-6 text-center text-white">
+      <!-- Icon/Visual -->
+      <div id="lightbox-graphic" class="w-64 h-64 bg-slate-900 rounded-2xl flex items-center justify-center text-8xl shadow-2xl border border-white/10 glow-primary"></div>
+      <!-- Info -->
+      <div class="space-y-2">
+        <h3 id="lightbox-title" class="text-xl md:text-2xl font-black font-display tracking-tight">Image Title</h3>
+        <p id="lightbox-description" class="text-slate-400 font-sans text-xs md:text-sm max-w-lg leading-relaxed">Detailed description of the event.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Anchor -->
+  <footer id="global-footer"></footer>
+
+  <!-- Core Javascript -->
+  <script src="js/main.js"></script>
+
+  <!-- Gallery Logic -->
+  <script>
+    function filterGallery(type) {
+      // Update buttons
+      const buttons = document.querySelectorAll('.gal-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white');
+        btn.classList.add('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
+      });
+
+      const activeBtn = document.getElementById(`btn-${type}`);
+      activeBtn.classList.remove('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
+      activeBtn.classList.add('bg-indigo-600', 'text-white');
+
+      // Filter cards
+      const items = document.querySelectorAll('.gal-item');
+      items.forEach(item => {
+        if (type === 'all' || item.getAttribute('data-type') === type) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // Lightbox modal logic
+    const modal = document.getElementById('lightbox-modal');
+    const lGraphic = document.getElementById('lightbox-graphic');
+    const lTitle = document.getElementById('lightbox-title');
+    const lDesc = document.getElementById('lightbox-description');
+
+    function openLightbox(icon, title, desc) {
+      lGraphic.innerText = icon;
+      lTitle.innerText = title;
+      lDesc.innerText = desc;
+      modal.classList.remove('hidden');
+    }
+
+    // Close lightbox
+    window.closeLightbox = function() {
+      modal.classList.add('hidden');
+    }
+
+    // Close when clicking outside content area
+    modal.onclick = (e) => {
+      if (e.target === modal) closeLightbox();
+    }
+  </script>
+</body>
+</html>

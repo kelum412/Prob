@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="si" class="lang-si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Dept. of Social Welfare, Probation & Child Care Services - Southern Province</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandIndigo: '#4f46e5',
+            brandPink: '#ec4899',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Header Anchor -->
+  <header id="global-header"></header>
+
+  <!-- Page Banner - pt-28 added for floating menu offset -->
+  <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-[#120e2e] text-white pt-28 pb-16 px-4 md:px-8 text-center relative overflow-hidden gov-pattern">
+    <div class="max-w-7xl mx-auto space-y-4 relative z-10">
+      <span class="text-xs uppercase tracking-widest text-indigo-400 font-black">
+        <span data-lang="si">දෙපාර්තමේන්තු මහජන සේවා නාමාවලිය</span>
+        <span data-lang="en">Department Public Services Directory</span>
+        <span data-lang="ta">திணைக்கள பொதுச் சேவைப் பதிவேடு</span>
+      </span>
+      <h1 class="text-3xl md:text-5xl font-black font-display tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
+        <span data-lang="si">අපගේ සේවාවන්</span>
+        <span data-lang="en">Our Services</span>
+        <span data-lang="ta">எமது சேவைகள்</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Services Navigation Tabs -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 pt-12">
+    <div class="flex justify-center border-b dark:border-slate-800">
+      <button onclick="switchTab('welfare-services')" id="tab-welfare" class="px-6 md:px-12 py-4 text-sm md:text-base font-black tracking-wide border-b-4 border-indigo-650 text-indigo-650 dark:text-indigo-400 focus:outline-none transition-all duration-300">
+        <span data-lang="si">සමාජ සුබසාධන අංශය</span>
+        <span data-lang="en">Social Welfare Division</span>
+        <span data-lang="ta">சமூக நலன்புரிப் பிரிவு</span>
+      </button>
+      <button onclick="switchTab('childcare-services')" id="tab-childcare" class="px-6 md:px-12 py-4 text-sm md:text-base font-bold tracking-wide border-b-4 border-transparent text-slate-400 hover:text-slate-650 focus:outline-none transition-all duration-300">
+        <span data-lang="si">පරිවාස හා ළමාරක්ෂක අංශය</span>
+        <span data-lang="en">Probation & Child Care</span>
+        <span data-lang="ta">நன்னடத்தை & சிறுவர் பராமரிப்பு</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Services Content Wrapper -->
+  <main class="max-w-4xl mx-auto px-4 md:px-8 py-16 flex-1 w-full">
+    
+    <!-- SECTION 1: SOCIAL WELFARE -->
+    <div id="welfare-services" class="space-y-8 tab-content">
+      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-slate-800">
+        <span>🤝</span>
+        <span data-lang="si">සමාජ සුබසාධන සේවා නාමාවලිය</span>
+        <span data-lang="en">Social Welfare Services Directory</span>
+        <span data-lang="ta">சமூக நலன்புரிச் சேவைகள் விபரம்</span>
+      </h2>
+
+      <!-- Service Card 1 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">1. ජ්‍යෙෂ්ඨ වැඩිහිටි හැඳුනුම්පත ලබාදීම</span>
+              <span data-lang="en">1. Issuance of Senior Citizens Identity Cards</span>
+              <span data-lang="ta">1. முதியோர் அடையாள அட்டை வழங்கல்</span>
+            </h3>
+            <span class="bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 text-[10px] font-bold px-2 py-1 rounded">FREE</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">වයස අවුරුදු 60 ට වැඩි ජ්‍යෙෂ්ඨ පුරවැසියන් සඳහා ප්‍රවාහන, වෛද්‍ය සහ රාජ්‍ය ආයතන වලදී ප්‍රමුඛතාවය හා වට්ටම් ලබා ගැනීම සඳහා මෙම හැඳුනුම්පත නිකුත් කෙරේ.</span>
+            <span data-lang="en">This identity card is provided to senior citizens over the age of 60 to afford special discounts, priority in government queues, and medical/banking benefits.</span>
+            <span data-lang="ta">60 வயதிற்கு மேற்பட்ட முதியவர்களுக்கு முன்னுரிமைகள் மற்றும் சலுகைகளைப் பெறுவதற்கு இந்த அடையாள அட்டை வழங்கப்படுகிறது.</span>
+          </p>
+          <!-- Accordion Detail -->
+          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+            <button onclick="toggleAccordion('w-acc-1')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
+              <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
+              <span id="w-acc-1-icon">▼</span>
+            </button>
+            <div id="w-acc-1-body" class="hidden text-xs text-slate-500 dark:text-slate-400 space-y-2 pl-4 font-sans bg-slate-50 dark:bg-slate-950 p-4 rounded-xl">
+              <p><strong>Eligibility:</strong> Over 60 years of age, resident in the Southern Province.</p>
+              <p><strong>Required Documents:</strong> Birth Certificate, National Identity Card (NIC) copy, 2 Passport-sized photos.</p>
+              <p><strong>Application:</strong> Submit via your local Grama Niladhari to the Divisional Secretariat (Social Service Section).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">2. විශේෂ අවශ්‍යතා සහිත පුරවැසියන් සඳහා ස්වයං රැකියා ආධාර</span>
+              <span data-lang="en">2. Self-Employment Assistance for Disabled Citizens</span>
+              <span data-lang="ta">2. மாற்றுத்திறனாளிகளுக்கான சுயதொழில் நிதியுதவி</span>
+            </h3>
+            <span class="bg-brandPink/10 text-brandPink text-[10px] font-bold px-2 py-1 rounded">GRANT</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">විශේෂ අවශ්‍යතා සහිත පුද්ගලයින්ගේ ආර්ථික ස්වාධීනත්වය ඇති කිරීම සඳහා රු. 25,000/- දක්වා ස්වයං රැකියා මූල්‍යාධාර සහ උපකරණ ප්‍රදානය.</span>
+            <span data-lang="en">Providing financial grants and starting toolkits up to LKR 25,000/- to physically or mentally challenged individuals to start sustainable home ventures.</span>
+            <span data-lang="ta">மாற்றுத்திறனாளிகளின் பொருளாதாரத் தேவைகளைப் பூர்த்தி செய்யும் முகமாக சுயதொழில் ஆரம்பிக்க ரூ. 25,000/- வரையிலான நிதியுதவி மற்றும் உபகரணங்கள் வழங்கல்.</span>
+          </p>
+          <!-- Accordion Detail -->
+          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+            <button onclick="toggleAccordion('w-acc-2')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
+              <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
+              <span id="w-acc-2-icon">▼</span>
+            </button>
+            <div id="w-acc-2-body" class="hidden text-xs text-slate-500 dark:text-slate-400 space-y-2 pl-4 font-sans bg-slate-50 dark:bg-slate-950 p-4 rounded-xl">
+              <p><strong>Eligibility:</strong> Certified disability certificate from a government medical officer, monthly household income below LKR 15,000/-.</p>
+              <p><strong>Required Documents:</strong> Grama Niladhari certification, detailed project proposal of the self-employment business, copy of medical certificate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">3. විශේෂ අවශ්‍යතා සහිත පුරවැසියන් සඳහා වෛද්‍ය උපකරණ ආධාර</span>
+              <span data-lang="en">3. Assistive & Medical Device Distribution</span>
+              <span data-lang="ta">3. மாற்றுத்திறனாளிகளுக்கான மருத்துவ உபகரணங்கள் வழங்கல்</span>
+            </h3>
+            <span class="bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 text-[10px] font-bold px-2 py-1 rounded">DEVICES</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">රෝද පුටු, ශ්‍රවණ උපකරණ, අත්වාරු, සහ ඇස් කණ්ණාඩි වැනි උපකරණ නොමිලේ ලබාදීම.</span>
+            <span data-lang="en">Providing wheelchairs, hearing amplifiers, walking crutches, white canes, and medical spectacles to deserving disabled citizens free of charge.</span>
+            <span data-lang="ta">சக்கர நாற்காலிகள், செவிப்புலன் கருவிகள் மற்றும் இதர மருத்துவ உபகரணங்களை மாற்றுத்திறனாளிகளுக்கு இலவசமாக வழங்குதல்.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: CHILD CARE & PROBATION -->
+    <div id="childcare-services" class="space-y-8 tab-content hidden">
+      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-slate-800">
+        <span>🧸</span>
+        <span data-lang="si">ළමාරක්ෂක හා පරිවාස සේවා නාමාවලිය</span>
+        <span data-lang="en">Probation & Child Care Services Directory</span>
+        <span data-lang="ta">நன்னடத்தை & சிறுவர் பாதுகாப்பு சேவைகள் பதிவேடு</span>
+      </h2>
+
+      <!-- Service Card 1 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">1. දේශීය දරුකමට හදාගැනීමේ සේවාව (Adoption)</span>
+              <span data-lang="en">1. Domestic Child Adoption Services</span>
+              <span data-lang="ta">1. உள்நாட்டு தத்தெடுப்புச் சேவைகள்</span>
+            </h3>
+            <span class="bg-indigo-950 text-white text-[10px] font-bold px-2 py-1 rounded">LEGAL</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">ළමුන් නොමැති විවාහක යුවළක් සඳහා පරිවාස දෙපාර්තමේන්තුවේ අධීක්ෂණය මත නීත්‍යානුකූලව දරුවෙකු දරුකමට හදාගැනීමේ ක්‍රියාවලිය සම්බන්ධීකරණය.</span>
+            <span data-lang="en">Facilitating legal adoption processes for childless married couples. Under court direction, we perform strict home-study audits to match children in orphanages.</span>
+            <span data-lang="ta">பிள்ளையற்ற தம்பதியினருக்கு நீதிமன்ற உத்தரவின் கீழ் சட்டபூர்வமாக பிள்ளைகளைத் தத்தெடுப்பதற்கான வழிகாட்டல்களை வழங்குதல்.</span>
+          </p>
+          <!-- Accordion Detail -->
+          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+            <button onclick="toggleAccordion('c-acc-1')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
+              <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
+              <span id="c-acc-1-icon">▼</span>
+            </button>
+            <div id="c-acc-1-body" class="hidden text-xs text-slate-500 dark:text-slate-400 space-y-2 pl-4 font-sans bg-slate-50 dark:bg-slate-950 p-4 rounded-xl">
+              <p><strong>Eligibility:</strong> Married for at least 3 years, age between 25-55, financially stable with clean police records.</p>
+              <p><strong>Process:</strong> Register applicant with the Provincial Department -> Home investigation report -> Court appearance -> Foster-matching period -> Legal Adoption Decree.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">2. දිවා සුරැකුම් මධ්‍යස්ථාන ලියාපදිංචි කිරීම</span>
+              <span data-lang="en">2. Registration of Early Daycare Centers</span>
+              <span data-lang="ta">2. சிறுவர் காப்பகங்களைப் பதிவுசெய்தல்</span>
+            </h3>
+            <span class="bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 text-[10px] font-bold px-2 py-1 rounded">REGISTRATION</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">දකුණු පළාත තුළ ක්‍රියාත්මක වන ළමා දිවා සුරැකුම් මධ්‍යස්ථාන සඳහා ප්‍රමිතිකරණය, ලියාපදිංචි කිරීම සහ නිල බලපත්‍ර නිකුත් කිරීම.</span>
+            <span data-lang="en">Auditing, licensing, and registering private daycare centers and creches in the Southern Province to guarantee environmental safety and quality caretakers.</span>
+            <span data-lang="ta">தென் மாகாணத்திலுள்ள பகல்நேர சிறுவர் காப்பகங்களை தரம் பிரித்து, பதிவுசெய்து, உரிமங்களை வழங்குதல்.</span>
+          </p>
+          <!-- Accordion Detail -->
+          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+            <button onclick="toggleAccordion('c-acc-2')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
+              <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
+              <span id="c-acc-2-icon">▼</span>
+            </button>
+            <div id="c-acc-2-body" class="hidden text-xs text-slate-500 dark:text-slate-400 space-y-2 pl-4 font-sans bg-slate-50 dark:bg-slate-950 p-4 rounded-xl">
+              <p><strong>Requirements:</strong> Safety certificate from municipal authority, qualified caregivers (NVQ/Diploma in child development), space layout audit, and hygiene inspection report.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-6 space-y-4">
+          <div class="flex justify-between items-start gap-4">
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white">
+              <span data-lang="si">3. පරිවාස හා පුනරුත්ථාපන සේවා</span>
+              <span data-lang="en">3. Juvenile Probation & Court Representation</span>
+              <span data-lang="ta">3. நன்னடத்தைக் கண்காணிப்பு மற்றும் நீதிமன்றப் பிரதிநிதித்துவம்</span>
+            </h3>
+            <span class="bg-red-500/10 text-red-650 text-[10px] font-bold px-2 py-1 rounded">PROBATION</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+            <span data-lang="si">අධිකරණය මඟින් නියෝග කරනු ලබන පරිවාස නියෝග ක්‍රියාත්මක කිරීම, බාල වයස්කාර වැරදිකරුවන් සහතික කළ පාසල් මඟින් පුනරුත්ථාපනය කිරීම.</span>
+            <span data-lang="en">Administering court-ordered juvenile probation orders, providing counseling, and supervising certified training school homes for youth rehabilitation.</span>
+            <span data-lang="ta">நீதிமன்ற உத்தரவின் கீழான சிறுவர் நன்னடத்தை கண்காணிப்பு, ஆலோசனை வழங்கல் மற்றும் புனர்வாழ்வு சேவைகள்.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Anchor -->
+  <footer id="global-footer"></footer>
+
+  <!-- Core Javascript -->
+  <script src="js/main.js"></script>
+
+  <!-- Accordion and Tabs Script -->
+  <script>
+    function switchTab(tabId) {
+      // Hide all tabs
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.add('hidden'));
+
+      // Show selected tab
+      document.getElementById(tabId).classList.remove('hidden');
+
+      // Update button borders
+      const tabWelfare = document.getElementById('tab-welfare');
+      const tabChildcare = document.getElementById('tab-childcare');
+
+      if (tabId === 'welfare-services') {
+        tabWelfare.classList.remove('border-transparent', 'text-slate-400');
+        tabWelfare.classList.add('border-indigo-650', 'text-indigo-650', 'dark:text-indigo-400');
+        tabChildcare.classList.remove('border-indigo-650', 'text-indigo-650', 'dark:text-indigo-400');
+        tabChildcare.classList.add('border-transparent', 'text-slate-400');
+      } else {
+        tabChildcare.classList.remove('border-transparent', 'text-slate-400');
+        tabChildcare.classList.add('border-indigo-650', 'text-indigo-650', 'dark:text-indigo-400');
+        tabWelfare.classList.remove('border-indigo-650', 'text-indigo-650', 'dark:text-indigo-400');
+        tabWelfare.classList.add('border-transparent', 'text-slate-400');
+      }
+    }
+
+    function toggleAccordion(accId) {
+      const body = document.getElementById(`${accId}-body`);
+      const icon = document.getElementById(`${accId}-icon`);
+
+      if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        icon.innerText = '▲';
+      } else {
+        body.classList.add('hidden');
+        icon.innerText = '▼';
+      }
+    }
+  </script>
+</body>
+</html>
