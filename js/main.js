@@ -363,18 +363,22 @@ function injectFooter() {
   }[currentLang];
 
   const html = `
-    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-8 px-4 md:px-8 font-sans">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer class="bg-[#030712] text-slate-300 border-t border-slate-800/80 pt-20 pb-10 px-4 md:px-8 font-sans relative overflow-hidden">
+      <!-- Glow background decoration -->
+      <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+      <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
         <!-- Dept Identity -->
-        <div class="space-y-4">
-          <div class="flex items-center space-x-3">
-            <img src="assets/official-logo.png" alt="Logo" class="w-10 h-10 brightness-95">
+        <div class="space-y-5">
+          <div class="flex items-center space-x-3.5">
+            <img src="assets/official-logo.png" alt="Logo" class="w-12 h-12 brightness-110 drop-shadow-[0_0_10px_rgba(250,191,36,0.15)]">
             <div>
-              <p class="text-[10px] uppercase text-indigo-400 font-extrabold tracking-wider">${footerText.govName}</p>
-              <h3 class="text-xs md:text-sm font-bold text-white tracking-wide leading-tight">${footerText.dept}</h3>
+              <p class="text-[9px] uppercase text-[#fbbf24] font-black tracking-widest leading-none mb-1">${footerText.govName}</p>
+              <h3 class="text-xs md:text-sm font-black text-white tracking-wide leading-snug font-display">${footerText.dept}</h3>
             </div>
           </div>
-          <p class="text-xs text-slate-450 leading-relaxed pt-2">
+          <p class="text-xs text-slate-400 leading-relaxed font-sans pt-2">
             ${currentLang === 'si' 
               ? "දකුණු පළාතේ සෑම දරුවෙකුගේම සුරක්ෂිතභාවය තහවුරු කිරීමට සහ ජ්‍යෙෂ්ඨ පුරවැසියන් ඇතුළු සමස්ත ප්‍රජාවගේ සුබසාධනය නැංවීමට කැපවී සිටිමු."
               : currentLang === 'ta'
@@ -384,50 +388,50 @@ function injectFooter() {
         </div>
 
         <!-- Emergency Hotlines (Highlight Card) -->
-        <div class="bg-indigo-950/20 border border-indigo-500/20 p-5 rounded-xl space-y-3">
-          <h4 class="text-xs uppercase tracking-widest text-indigo-450 font-black">${footerText.hotlineTitle}</h4>
-          <ul class="space-y-2.5 pt-1.5">
-            <li class="flex items-center space-x-2 text-xs">
+        <div class="bg-[#0d1527] border border-[#0ea5e9]/20 p-6 rounded-3xl space-y-4 shadow-xl shadow-black/20">
+          <h4 class="text-[10px] uppercase tracking-widest text-[#0ea5e9] font-black font-display">${footerText.hotlineTitle}</h4>
+          <ul class="space-y-3.5 pt-1">
+            <li class="flex items-center space-x-3 text-xs bg-red-500/10 border border-red-500/20 p-2.5 rounded-xl">
               <span class="w-2 h-2 rounded-full bg-red-500 inline-block animate-ping"></span>
-              <strong class="text-white">${footerText.childHotline}</strong>
+              <strong class="text-red-200">${footerText.childHotline}</strong>
             </li>
-            <li class="flex items-center space-x-2 text-xs">
+            <li class="flex items-center space-x-3 text-xs bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl">
               <span class="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
-              <strong class="text-white">${footerText.elderHotline}</strong>
+              <strong class="text-amber-200">${footerText.elderHotline}</strong>
             </li>
           </ul>
         </div>
 
         <!-- Quick Links -->
-        <div class="space-y-3">
-          <h4 class="text-xs uppercase tracking-wider text-white font-bold">${footerText.quickLinks}</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="about.html" class="hover:text-indigo-400 transition-colors">👉 About Us</a></li>
-            <li><a href="services.html" class="hover:text-indigo-400 transition-colors">👉 Our Services</a></li>
-            <li><a href="downloads.html" class="hover:text-indigo-400 transition-colors">👉 Applications & Forms</a></li>
-            <li><a href="gallery.html" class="hover:text-indigo-400 transition-colors">👉 Photo Gallery</a></li>
+        <div class="space-y-4">
+          <h4 class="text-xs uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.quickLinks}</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400 font-sans">
+            <li><a href="about.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">අප ගැන</span><span data-lang="en">About Us</span><span data-lang="ta">எங்களைப் பற்றி</span></a></li>
+            <li><a href="services.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">සේවා</span><span data-lang="en">Our Services</span><span data-lang="ta">சேவைகள்</span></a></li>
+            <li><a href="downloads.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">බාගත කිරීම්</span><span data-lang="en">Applications & Forms</span><span data-lang="ta">பதிவிறக்கங்கள்</span></a></li>
+            <li><a href="gallery.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">ඡායාරූප</span><span data-lang="en">Photo Gallery</span><span data-lang="ta">புகைப்படங்கள்</span></a></li>
           </ul>
         </div>
 
         <!-- Direct Contact Details -->
-        <div class="space-y-3">
-          <h4 class="text-xs uppercase tracking-wider text-white font-bold">${footerText.contactUs}</h4>
-          <ul class="space-y-2 text-xs text-slate-400">
-            <li class="flex items-start gap-1.5">📍 <span>${footerText.address}</span></li>
-            <li class="flex items-center gap-1.5">📞 <span>${footerText.phone}</span></li>
-            <li class="flex items-center gap-1.5">📠 <span>${footerText.fax}</span></li>
-            <li class="flex items-center gap-1.5">✉️ <a href="mailto:probationdepsp@gmail.com" class="hover:underline">${footerText.email}</a></li>
+        <div class="space-y-4">
+          <h4 class="text-xs uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.contactUs}</h4>
+          <ul class="space-y-3 text-xs text-slate-450 font-sans">
+            <li class="flex items-start gap-2.5">📍 <span class="leading-normal">${footerText.address}</span></li>
+            <li class="flex items-center gap-2.5">📞 <span class="leading-normal">${footerText.phone}</span></li>
+            <li class="flex items-center gap-2.5">📠 <span class="leading-normal">${footerText.fax}</span></li>
+            <li class="flex items-center gap-2.5">✉️ <a href="mailto:probationdepsp@gmail.com" class="hover:text-[#fbbf24] transition-colors leading-normal">${footerText.email}</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Copyright & Credits -->
-      <div class="max-w-7xl mx-auto border-t border-slate-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-        <p>© 2026 ${footerText.dept}. ${footerText.rights}</p>
-        <div class="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" class="hover:underline">${footerText.terms}</a>
+      <div class="max-w-7xl mx-auto border-t border-slate-800/80 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 relative z-10">
+        <p class="text-center md:text-left">© 2026 ${footerText.dept}. ${footerText.rights}</p>
+        <div class="flex space-x-4 mt-4 md:mt-0 font-sans">
+          <a href="#" class="hover:underline hover:text-slate-400">${footerText.terms}</a>
           <span class="text-slate-800">|</span>
-          <span>Designed for Southern Province Department</span>
+          <span class="text-slate-450">Designed for Southern Province Department</span>
         </div>
       </div>
     </footer>
