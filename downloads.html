@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -82,13 +82,13 @@
   <main class="max-w-6xl mx-auto px-4 md:px-8 py-16 flex-1 w-full space-y-8">
     
     <!-- Controls -->
-    <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm">
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-indigo-100 dark:bg-indigo-950 p-5 rounded-2xl border border-slate-800 dark:border-indigo-900/40 shadow-sm">
       <div class="w-full md:max-w-md">
-        <input type="text" id="dl-search-input" onkeyup="filterDownloads()" placeholder="Search form or circular name..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500 text-sm font-sans">
+        <input type="text" id="dl-search-input" onkeyup="filterDownloads()" placeholder="Search form or circular name..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500 text-sm font-sans">
       </div>
       
       <div class="flex gap-2 w-full md:w-auto overflow-x-auto">
-        <button onclick="filterCategory('all')" id="cat-all" class="cat-btn px-4 py-2 bg-indigo-650 text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap">All Files</button>
+        <button onclick="filterCategory('all')" id="cat-all" class="cat-btn px-4 py-2 bg-indigo-600 text-slate-950 font-bold text-xs font-bold rounded-lg transition-colors whitespace-nowrap">All Files</button>
         <button onclick="filterCategory('form')" id="cat-form" class="cat-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors whitespace-nowrap">Applications</button>
         <button onclick="filterCategory('circular')" id="cat-circular" class="cat-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors whitespace-nowrap">Circulars & Acts</button>
       </div>
@@ -97,7 +97,7 @@
     <!-- Downloads Listing Table/Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="downloads-grid">
       <!-- File 1 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-red-500">
             <span class="text-2xl">📄</span>
@@ -113,16 +113,16 @@
             <span>🌐 Sinhala / English</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-EL-01</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>
       </div>
 
       <!-- File 2 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-red-500">
             <span class="text-2xl">📄</span>
@@ -138,16 +138,16 @@
             <span>🌐 Sinhala / English / Tamil</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-DA-02</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>
       </div>
 
       <!-- File 3 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-red-500">
             <span class="text-2xl">📄</span>
@@ -163,16 +163,16 @@
             <span>🌐 Sinhala / English</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-PC-DC-05</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>
       </div>
 
       <!-- File 4 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="form">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-red-500">
             <span class="text-2xl">📄</span>
@@ -188,16 +188,16 @@
             <span>🌐 Sinhala / English</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-PC-AD-07</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>
       </div>
 
       <!-- File 5 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-[#0b3c48]">
             <span class="text-2xl">📕</span>
@@ -213,16 +213,16 @@
             <span>🌐 Sinhala / English / Tamil</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-GOV-CIRC-11</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>
       </div>
 
       <!-- File 6 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 flex flex-col justify-between interactive-card shadow-sm download-card" data-category="circular">
         <div class="space-y-4">
           <div class="flex items-center space-x-3 text-[#0b3c48]">
             <span class="text-2xl">📕</span>
@@ -238,9 +238,9 @@
             <span>🌐 Sinhala</span>
           </div>
         </div>
-        <div class="border-t pt-4 mt-6 dark:border-slate-800 flex justify-between items-center">
+        <div class="border-t pt-4 mt-6 dark:border-indigo-900/40 flex justify-between items-center">
           <span class="text-[10px] text-slate-400 font-sans">Ref: SP-SW-CIRC-04</span>
-          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
+          <a href="#" onclick="alert('Download Started successfully!'); return false;" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center gap-1.5">
             <span>📥 Download</span>
           </a>
         </div>

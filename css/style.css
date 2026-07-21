@@ -6,51 +6,51 @@
   --font-display: 'Outfit', 'Noto Sans Sinhala', sans-serif;
   --font-body: 'Inter', 'Noto Sans Sinhala', sans-serif;
 
-  /* HSL Colors - Modern Forest Green / Cream Light Mode */
-  --primary-hue: 131;
-  --primary-sat: 32%;
-  --primary-light: 27%;
+  /* HSL Colors - Modern Techvex Corporate Dark Mode (Midnight Navy base) */
+  --primary-hue: 45;
+  --primary-sat: 93%;
+  --primary-light: 47%;
   
-  --secondary-hue: 128;
-  --secondary-sat: 17%;
-  --secondary-light: 62%;
+  --secondary-hue: 199;
+  --secondary-sat: 89%;
+  --secondary-light: 48%;
 
-  --bg-hue: 48;
-  --bg-sat: 20%;
-  --bg-light: 97%;
+  --bg-hue: 222;
+  --bg-sat: 47%;
+  --bg-light: 11%;
 
-  --card-hue: 48;
-  --card-sat: 15%;
-  --card-light: 99%;
+  --card-hue: 224;
+  --card-sat: 33%;
+  --card-light: 16%;
 
-  --text-hue: 131;
-  --text-sat: 28%;
-  --text-light: 10%;
+  --text-hue: 210;
+  --text-sat: 40%;
+  --text-light: 98%;
 
   --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
   --secondary: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-light));
   --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
   --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
   --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
-  --text-muted: hsl(131, 14%, 40%);
-  --border-color: rgba(46, 90, 54, 0.08);
-  --shadow-sm: 0 2px 4px rgba(46, 90, 54, 0.02);
-  --shadow-md: 0 8px 30px -2px rgba(46, 90, 54, 0.06);
-  --shadow-lg: 0 30px 60px -15px rgba(46, 90, 54, 0.1);
+  --text-muted: hsl(215, 20%, 65%);
+  --border-color: rgba(14, 165, 233, 0.12);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 30px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
 }
 
 :root.dark {
-  /* HSL Colors - Forest Green Dark Mode */
-  --primary-light: 45%;
-  --secondary-light: 60%;
-  --bg-hue: 131;
-  --bg-sat: 15%;
+  /* Techvex Corporate Midnight Dark Mode (Deep Midnight Black-Blue) */
+  --bg-hue: 224;
+  --bg-sat: 60%;
   --bg-light: 6%;
-  --card-hue: 131;
-  --card-sat: 15%;
+  
+  --card-hue: 224;
+  --card-sat: 50%;
   --card-light: 10%;
-  --text-hue: 128;
-  --text-sat: 15%;
+  
+  --text-hue: 210;
+  --text-sat: 40%;
   --text-light: 95%;
 
   --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
@@ -58,11 +58,11 @@
   --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
   --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
   --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
-  --text-muted: hsl(128, 10%, 65%);
-  --border-color: rgba(255, 255, 255, 0.06);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 30px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+  --text-muted: hsl(215, 15%, 60%);
+  --border-color: rgba(14, 165, 233, 0.08);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 30px -2px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.7);
 }
 
 /* Global resets & typography */

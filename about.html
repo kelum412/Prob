@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -81,7 +81,7 @@
   <!-- Vision & Mission -->
   <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- Vision -->
-    <div class="interactive-card rounded-3xl p-8 border border-slate-200/50 dark:border-slate-800 space-y-4">
+    <div class="interactive-card rounded-3xl p-8 border border-slate-800 dark:border-indigo-900/40 space-y-4">
       <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-3xl">👁️</div>
       <h2 class="text-2xl font-black text-slate-850 dark:text-indigo-400">
         <span data-lang="si">අපගේ දර්ශනය</span>
@@ -96,7 +96,7 @@
     </div>
 
     <!-- Mission -->
-    <div class="interactive-card rounded-3xl p-8 border border-slate-200/50 dark:border-slate-800 space-y-4">
+    <div class="interactive-card rounded-3xl p-8 border border-slate-800 dark:border-indigo-900/40 space-y-4">
       <div class="w-14 h-14 bg-pink-500/10 text-brandPink rounded-2xl flex items-center justify-center text-3xl">🎯</div>
       <h2 class="text-2xl font-black text-slate-855 dark:text-indigo-400">
         <span data-lang="si">අපගේ මෙහෙවර</span>
@@ -112,7 +112,7 @@
   </section>
 
   <!-- Organization Hierarchy -->
-  <section class="bg-slate-100 dark:bg-slate-900/60 py-20 px-4 md:px-8 grid-bg">
+  <section class="bg-slate-100 dark:bg-indigo-950/60 py-20 px-4 md:px-8 grid-bg">
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center space-y-4">
         <h2 class="text-2xl md:text-3.5xl font-black text-slate-800 dark:text-indigo-400">
@@ -125,7 +125,7 @@
 
       <!-- Root Level -->
       <div class="flex flex-col items-center space-y-8">
-        <div class="bg-indigo-650 text-white p-6 rounded-2xl shadow-lg border border-indigo-600 text-center max-w-sm w-full">
+        <div class="bg-indigo-600 text-slate-950 font-bold p-6 rounded-2xl shadow-lg border border-indigo-600 text-center max-w-sm w-full">
           <h4 class="font-extrabold text-xs uppercase tracking-wider text-indigo-300">Level 1: Management</h4>
           <h3 class="text-lg font-black pt-1">Provincial Commissioner</h3>
           <p class="text-xs text-indigo-200 font-sans pt-1">
@@ -140,19 +140,19 @@
 
         <!-- Sub Level Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full">
-          <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center">
+          <div class="bg-indigo-100 dark:bg-indigo-950 p-5 rounded-xl border border-slate-800 dark:border-indigo-900/40 shadow-sm text-center">
             <h4 class="text-xs uppercase text-indigo-500 font-bold">Admin Division</h4>
             <h3 class="text-base font-bold text-slate-800 dark:text-white pt-1">Assistant Commissioner</h3>
             <p class="text-xs text-slate-400 font-sans">සහකාර කොමසාරිස්</p>
           </div>
 
-          <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center">
+          <div class="bg-indigo-100 dark:bg-indigo-950 p-5 rounded-xl border border-slate-800 dark:border-indigo-900/40 shadow-sm text-center">
             <h4 class="text-xs uppercase text-indigo-500 font-bold">Accounts Division</h4>
             <h3 class="text-base font-bold text-slate-800 dark:text-white pt-1">Accountant</h3>
             <p class="text-xs text-slate-400 font-sans">ප්‍රධාන ගණකාධිකාරී</p>
           </div>
 
-          <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center">
+          <div class="bg-indigo-100 dark:bg-indigo-950 p-5 rounded-xl border border-slate-800 dark:border-indigo-900/40 shadow-sm text-center">
             <h4 class="text-xs uppercase text-indigo-500 font-bold">Legal & Field Operations</h4>
             <h3 class="text-base font-bold text-slate-800 dark:text-white pt-1">Provincial Probation Officer</h3>
             <p class="text-xs text-slate-400 font-sans">පළාත් පරිවාස නිලධාරී</p>
@@ -178,9 +178,9 @@
     </div>
 
     <!-- Search Controls -->
-    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-md border border-slate-200/60 dark:border-slate-800 z-10 relative">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 bg-indigo-100 dark:bg-indigo-950 p-4 rounded-2xl shadow-md border border-slate-800 dark:border-indigo-900/40 z-10 relative">
       <div class="flex-1">
-        <input type="text" id="search-input" onkeyup="filterOffices()" placeholder="Search office e.g. Galle, Matara..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500 text-sm font-sans">
+        <input type="text" id="search-input" onkeyup="filterOffices()" placeholder="Search office e.g. Galle, Matara..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500 text-sm font-sans">
       </div>
       <div class="flex gap-2">
         <button onclick="filterDistrict('all')" class="district-btn px-4 py-2.5 bg-indigo-600 text-white text-xs font-bold rounded-lg transition-colors shadow-sm" id="btn-all">All</button>
@@ -193,7 +193,7 @@
     <!-- Offices List Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4" id="offices-grid">
       <!-- Office 1: Galle District Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">ගාල්ල දිස්ත්‍රික්කය</span>
           <span data-lang="en">Galle District</span>
@@ -216,7 +216,7 @@
       </div>
 
       <!-- Office 2: Balapitiya Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">ගාල්ල දිස්ත්‍රික්කය</span>
           <span data-lang="en">Galle District</span>
@@ -239,7 +239,7 @@
       </div>
 
       <!-- Office 3: Elpitiya Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">ගාල්ල දිස්ත්‍රික්කය</span>
           <span data-lang="en">Galle District</span>
@@ -262,7 +262,7 @@
       </div>
 
       <!-- Office 4: Baddegama Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">ගාල්ල දිස්ත්‍රික්කය</span>
           <span data-lang="en">Galle District</span>
@@ -285,7 +285,7 @@
       </div>
 
       <!-- Office 5: Udugama Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="galle">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-650 dark:text-indigo-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">ගාල්ල දිස්ත්‍රික්කය</span>
           <span data-lang="en">Galle District</span>
@@ -308,7 +308,7 @@
       </div>
 
       <!-- Office 6: Matara District Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="matara">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="matara">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-pink-500/10 text-brandPink font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">මාතර දිස්ත්‍රික්කය</span>
           <span data-lang="en">Matara District</span>
@@ -331,7 +331,7 @@
       </div>
 
       <!-- Office 7: Morawaka Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="matara">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="matara">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-pink-500/10 text-brandPink font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">මාතර දිස්ත්‍රික්කය</span>
           <span data-lang="en">Matara District</span>
@@ -354,7 +354,7 @@
       </div>
 
       <!-- Office 8: Walasmulla Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">හම්බන්තොට දිස්ත්‍රික්කය</span>
           <span data-lang="en">Hambantota District</span>
@@ -377,7 +377,7 @@
       </div>
 
       <!-- Office 9: Hambantota District Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">හම්බන්තොට දිස්ත්‍රික්කය</span>
           <span data-lang="en">Hambantota District</span>
@@ -400,7 +400,7 @@
       </div>
 
       <!-- Office 10: Tangalle Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">හම්බන්තොට දිස්ත්‍රික්කය</span>
           <span data-lang="en">Hambantota District</span>
@@ -423,7 +423,7 @@
       </div>
 
       <!-- Office 11: Tissamaharama Office -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 p-6 rounded-2xl space-y-4 office-card shadow-sm" data-district="hambantota">
         <span class="text-[10px] uppercase px-2.5 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 font-extrabold rounded-md inline-block font-sans">
           <span data-lang="si">හම්බන්තොට දිස්ත්‍රික්කය</span>
           <span data-lang="en">Hambantota District</span>

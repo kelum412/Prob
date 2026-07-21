@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -102,7 +102,7 @@
             <span class="block text-2xl font-black">1929</span>
             <span class="text-[10px] font-bold uppercase tracking-widest text-red-100 font-sans">Child Protection</span>
           </a>
-          <a href="tel:1920" class="bg-slate-800 dark:bg-slate-900 hover:bg-slate-750 text-white p-4 rounded-xl text-center shadow transition-all block border border-slate-750">
+          <a href="tel:1920" class="bg-slate-800 dark:bg-indigo-950 hover:bg-slate-750 text-white p-4 rounded-xl text-center shadow transition-all block border border-slate-750">
             <span class="block text-2xl font-black">1920</span>
             <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-400 font-sans">Elders Helpline</span>
           </a>
@@ -110,15 +110,15 @@
       </div>
 
       <!-- Main Directory -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-6 space-y-6 shadow-sm">
-        <h3 class="text-lg font-black text-slate-850 dark:text-indigo-400 border-b pb-2 dark:border-slate-800">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl p-6 space-y-6 shadow-sm">
+        <h3 class="text-lg font-black text-slate-850 dark:text-indigo-400 border-b pb-2 dark:border-indigo-900/40">
           <span data-lang="si">ප්‍රධාන නිලධාරීන්ගේ සම්බන්ධතා</span>
           <span data-lang="en">Key Officers Directory</span>
           <span data-lang="ta">முக்கிய அதிகாரிகள் தொடர்பு விபரம்</span>
         </h3>
         
         <ul class="space-y-5 text-xs font-sans">
-          <li class="border-b pb-3 dark:border-slate-800 space-y-1">
+          <li class="border-b pb-3 dark:border-indigo-900/40 space-y-1">
             <strong class="text-slate-800 dark:text-slate-200 font-display block text-sm">
               <span data-lang="si">පළාත් දෙපාර්තමේන්තු කාර්යාලය (මූලස්ථානය)</span>
               <span data-lang="en">Provincial Department Office (Headquarters)</span>
@@ -155,9 +155,9 @@
     </div>
 
     <!-- Right Column: Contact Form -->
-    <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
+    <div class="lg:col-span-7 bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-3xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
       <!-- Success Overlay (Hidden initially) -->
-      <div id="form-success-overlay" class="absolute inset-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md flex flex-col items-center justify-center space-y-4 text-center z-45 p-6 hidden">
+      <div id="form-success-overlay" class="absolute inset-0 bg-indigo-100/95 dark:bg-slate-950/95 backdrop-blur-md flex flex-col items-center justify-center space-y-4 text-center z-45 p-6 hidden">
         <span class="w-16 h-16 bg-indigo-500/10 text-indigo-650 rounded-full flex items-center justify-center text-4xl animate-bounce">✓</span>
         <h3 class="text-2xl font-black text-slate-850 dark:text-white font-display">
           <span data-lang="si">පණිවිඩය සාර්ථකව ලැබුණි!</span>
@@ -169,7 +169,7 @@
           <span data-lang="en">Thank you for reaching out. A representative from the department will contact you shortly.</span>
           <span data-lang="ta">எங்கள் உத்தியோகத்தர் ஒருவர் விரைவில் உங்களைத் தொடர்புகொள்வார். நன்றி!</span>
         </p>
-        <button onclick="resetContactForm()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition-colors">
+        <button onclick="resetContactForm()" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs transition-colors">
           <span data-lang="si">නව පණිවිඩයක් යවන්න</span>
           <span data-lang="en">Send Another Message</span>
           <span data-lang="ta">மற்றொரு செய்தி அனுப்ப</span>
@@ -195,25 +195,25 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="space-y-1.5">
               <label for="form-name" class="block font-bold text-slate-700 dark:text-slate-300">Name (නම / பெயர்) <span class="text-red-500">*</span></label>
-              <input type="text" id="form-name" placeholder="John Doe" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500" required>
+              <input type="text" id="form-name" placeholder="John Doe" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500" required>
             </div>
             <div class="space-y-1.5">
               <label for="form-email" class="block font-bold text-slate-700 dark:text-slate-300">Email (විද්‍යුත් ලිපිනය / மின்னஞ்சல்) <span class="text-red-500">*</span></label>
-              <input type="email" id="form-email" placeholder="name@example.com" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500" required>
+              <input type="email" id="form-email" placeholder="name@example.com" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500" required>
             </div>
           </div>
 
           <div class="space-y-1.5">
             <label for="form-subject" class="block font-bold text-slate-700 dark:text-slate-300">Subject (මාතෘකාව / விடயம்)</label>
-            <input type="text" id="form-subject" placeholder="Inquiry about adoption services" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500">
+            <input type="text" id="form-subject" placeholder="Inquiry about adoption services" class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500">
           </div>
 
           <div class="space-y-1.5">
             <label for="form-message" class="block font-bold text-slate-700 dark:text-slate-300">Message (පණිවිඩය / செய்தி) <span class="text-red-500">*</span></label>
-            <textarea id="form-message" rows="5" placeholder="Write your message here..." class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-500 resize-none" required></textarea>
+            <textarea id="form-message" rows="5" placeholder="Write your message here..." class="w-full bg-slate-50 dark:bg-slate-950 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500 resize-none" required></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-lg text-xs md:text-sm transition-colors shadow">
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold py-3 rounded-lg text-xs md:text-sm transition-colors shadow">
             <span data-lang="si">පණිවිඩය යොමු කරන්න ➔</span>
             <span data-lang="en">Submit Message ➔</span>
             <span data-lang="ta">செய்தியை சமர்ப்பிக்க ➔</span>
@@ -224,7 +224,7 @@
   </main>
 
   <!-- Interactive Province Map Section -->
-  <section class="bg-slate-100 dark:bg-slate-900/60 py-20 px-4 md:px-8 grid-bg border-t border-slate-200/50 dark:border-slate-800">
+  <section class="bg-slate-100 dark:bg-indigo-950/60 py-20 px-4 md:px-8 grid-bg border-t border-slate-800 dark:border-indigo-900/40">
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center space-y-4">
         <h2 class="text-2xl md:text-3.5xl font-black text-slate-850 dark:text-indigo-400">
@@ -241,7 +241,7 @@
 
       <div class="flex justify-center">
         <!-- Sleek Province Map -->
-        <div class="relative w-full max-w-lg bg-white dark:bg-slate-900 p-6 rounded-2xl shadow border border-slate-200/50 dark:border-slate-800">
+        <div class="relative w-full max-w-lg bg-indigo-100 dark:bg-indigo-950 p-6 rounded-2xl shadow border border-slate-800 dark:border-indigo-900/40">
           <svg viewBox="0 0 400 200" class="w-full h-auto text-slate-200 dark:text-slate-800 fill-current">
             <path d="M 50,80 Q 80,75 120,90 T 200,100 T 280,120 T 350,150 L 350,180 L 50,180 Z" class="fill-indigo-500/10 stroke-indigo-500/30 dark:stroke-indigo-400/20 stroke-2" />
             
@@ -265,7 +265,7 @@
           </svg>
 
           <!-- Dynamic map tooltip info box -->
-          <div id="map-tooltip" class="mt-6 bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border dark:border-slate-800 text-center font-sans text-xs hidden">
+          <div id="map-tooltip" class="mt-6 bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border dark:border-indigo-900/40 text-center font-sans text-xs hidden">
             <h4 id="tooltip-title" class="font-extrabold text-indigo-650 dark:text-indigo-400">Galle HQ</h4>
             <p id="tooltip-desc" class="text-slate-500 dark:text-slate-400 pt-1">Baladaksha Mawatha, Galle.</p>
           </div>

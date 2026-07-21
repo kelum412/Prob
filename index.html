@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -96,7 +96,7 @@
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
             </a>
-            <a href="downloads.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+            <a href="downloads.html" class="bg-indigo-100/10 hover:bg-indigo-100/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
               <span data-lang="si">අයදුම්පත් බාගත කරන්න</span>
               <span data-lang="en">Download Applications</span>
               <span data-lang="ta">பதிவிறக்கங்கள்</span>
@@ -133,7 +133,7 @@
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
             </a>
-            <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+            <a href="contact.html" class="bg-indigo-100/10 hover:bg-indigo-100/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
               <span data-lang="si">හදිසි උපකාර</span>
               <span data-lang="en">Emergency Help</span>
               <span data-lang="ta">அவசர உதவி</span>
@@ -170,7 +170,7 @@
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
             </a>
-            <a href="downloads.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+            <a href="downloads.html" class="bg-indigo-100/10 hover:bg-indigo-100/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
               <span data-lang="si">අයදුම්පත් බාගත කරන්න</span>
               <span data-lang="en">Download Applications</span>
               <span data-lang="ta">பதிவிறக்கங்கள்</span>
@@ -207,7 +207,7 @@
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
             </a>
-            <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+            <a href="contact.html" class="bg-indigo-100/10 hover:bg-indigo-100/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
               <span data-lang="si">සම්බන්ධ වන්න</span>
               <span data-lang="en">Get in Touch</span>
               <span data-lang="ta">தொடர்புகொள்ள</span>
@@ -219,10 +219,10 @@
 
     <!-- Slider Dots Controls -->
     <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      <button onclick="setSlide(0)" id="dot-0" class="w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
-      <button onclick="setSlide(1)" id="dot-1" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
-      <button onclick="setSlide(2)" id="dot-2" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
-      <button onclick="setSlide(3)" id="dot-3" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
+      <button onclick="setSlide(0)" id="dot-0" class="w-3 h-3 rounded-full bg-indigo-100 transition-all duration-300"></button>
+      <button onclick="setSlide(1)" id="dot-1" class="w-3 h-3 rounded-full bg-indigo-100/40 transition-all duration-300"></button>
+      <button onclick="setSlide(2)" id="dot-2" class="w-3 h-3 rounded-full bg-indigo-100/40 transition-all duration-300"></button>
+      <button onclick="setSlide(3)" id="dot-3" class="w-3 h-3 rounded-full bg-indigo-100/40 transition-all duration-300"></button>
     </div>
   </section>
 
@@ -230,7 +230,7 @@
   <div class="relative -mt-10 md:-mt-12 max-w-3xl mx-auto px-4 z-40">
     <div class="bg-[#faf9f5] dark:bg-[#151c18] rounded-[28px] shadow-2xl border border-[#2e5a36]/15 dark:border-[#2e5a36]/30 p-3.5 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-center">
       <!-- Search Field 1: WhatsApp Helpline -->
-      <a href="https://wa.me/94760763533" target="_blank" class="flex items-center space-x-3 px-6 py-3.5 bg-white dark:bg-[#0e1411] rounded-2xl border border-slate-200/60 dark:border-slate-850 hover:border-green-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
+      <a href="https://wa.me/94760763533" target="_blank" class="flex items-center space-x-3 px-6 py-3.5 bg-indigo-100 dark:bg-[#0e1411] rounded-2xl border border-slate-800 dark:border-slate-850 hover:border-green-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
         <span class="text-xl">💬</span>
         <div class="flex flex-col">
           <span class="text-[9px] uppercase font-bold text-slate-450 dark:text-slate-500 tracking-wider">
@@ -243,7 +243,7 @@
       </a>
 
       <!-- Search Field 2: 1929 Child Helpline -->
-      <a href="tel:1929" class="flex items-center space-x-3 px-6 py-3.5 bg-white dark:bg-[#0e1411] rounded-2xl border border-slate-200/60 dark:border-slate-850 hover:border-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
+      <a href="tel:1929" class="flex items-center space-x-3 px-6 py-3.5 bg-indigo-100 dark:bg-[#0e1411] rounded-2xl border border-slate-800 dark:border-slate-850 hover:border-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
         <span class="text-xl">📞</span>
         <div class="flex flex-col">
           <span class="text-[9px] uppercase font-bold text-slate-450 dark:text-slate-500 tracking-wider">
@@ -259,7 +259,7 @@
 
   <!-- Quick Action & Stats Dashboard -->
   <section class="max-w-7xl mx-auto px-4 md:px-8 mt-8 md:mt-12 relative z-30">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-850 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <div class="bg-indigo-100 dark:bg-indigo-950 rounded-2xl shadow-xl border border-slate-800 dark:border-slate-850 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
       <div class="space-y-1">
         <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="2500">0+</span>
         <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
@@ -268,7 +268,7 @@
           <span data-lang="ta">பாதுகாக்கப்பட்ட குழந்தைகள்</span>
         </p>
       </div>
-      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+      <div class="space-y-1 border-l border-slate-800 dark:border-indigo-900/40">
         <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="120">0+</span>
         <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
           <span data-lang="si">වැඩිහිටි නිවාස සංඛ්‍යාව</span>
@@ -276,7 +276,7 @@
           <span data-lang="ta">பதிவுசெய்யப்பட்ட முதியோர் இல்லங்கள்</span>
         </p>
       </div>
-      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+      <div class="space-y-1 border-l border-slate-800 dark:border-indigo-900/40">
         <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="85">0+</span>
         <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
           <span data-lang="si">ළමා සුරැකුම් මධ්‍යස්ථාන</span>
@@ -284,7 +284,7 @@
           <span data-lang="ta">சிறுவர் பராமரிப்பு நிலையங்கள்</span>
         </p>
       </div>
-      <div class="space-y-1 border-l border-slate-200/60 dark:border-slate-800">
+      <div class="space-y-1 border-l border-slate-800 dark:border-indigo-900/40">
         <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="15000">0+</span>
         <p class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1 font-sans">
           <span data-lang="si">ප්‍රතිලාභී පවුල් ප්‍රමාණය</span>
@@ -298,7 +298,7 @@
   <!-- Welcome / Commissioner Message -->
   <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-4 flex justify-center reveal">
-      <div class="relative w-64 h-64 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl zoom-img-container">
+      <div class="relative w-64 h-64 rounded-3xl overflow-hidden border-4 border-white dark:border-indigo-900/40 shadow-2xl zoom-img-container">
         <img src="assets/commissioner.png" alt="Provincial Commissioner" class="w-full h-full object-cover">
         <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent text-center pt-8 pb-3">
           <span class="text-indigo-400 text-xs font-black uppercase tracking-widest font-sans">Provincial Commissioner</span>
@@ -343,7 +343,7 @@
   </section>
 
   <!-- Core Services Quick Grid -->
-  <section class="bg-slate-100 dark:bg-slate-900/60 py-20 px-4 md:px-8 grid-bg">
+  <section class="bg-slate-100 dark:bg-indigo-950/60 py-20 px-4 md:px-8 grid-bg">
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center space-y-4">
         <h2 class="text-2xl md:text-4xl font-black text-slate-800 dark:text-indigo-400">
@@ -360,7 +360,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Card 1: Probation & Care -->
-        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
           <div class="space-y-4">
             <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-3xl">🧸</div>
             <h3 class="text-xl font-extrabold text-slate-850 dark:text-white leading-snug">
@@ -381,7 +381,7 @@
         </div>
 
         <!-- Card 2: Social Welfare -->
-        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
           <div class="space-y-4">
             <div class="w-14 h-14 bg-pink-500/10 text-brandPink rounded-2xl flex items-center justify-center text-3xl">🤝</div>
             <h3 class="text-xl font-extrabold text-slate-850 dark:text-white leading-snug">
@@ -402,7 +402,7 @@
         </div>
 
         <!-- Card 3: Community Development -->
-        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+        <div class="interactive-card rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
           <div class="space-y-4">
             <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-3xl">🏛️</div>
             <h3 class="text-xl font-extrabold text-slate-855 dark:text-white leading-snug">
@@ -450,7 +450,7 @@
           <span class="text-2xl font-black">1929</span>
           <span class="text-[9px] uppercase tracking-wider text-red-200 font-bold font-sans">Child Protection Hotline</span>
         </a>
-        <a href="tel:1920" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-2xl text-center shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col justify-center">
+        <a href="tel:1920" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-8 py-4 rounded-2xl text-center shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col justify-center">
           <span class="text-2xl font-black">1920</span>
           <span class="text-[9px] uppercase tracking-wider text-indigo-200 font-bold font-sans">Elders Assistance Desk</span>
         </a>
@@ -473,7 +473,7 @@
           <span data-lang="ta">எமது திணைக்களத்தின் அண்மைய செய்திகள் மற்றும் வரவிருக்கும் நிகழ்வுகள் பற்றி அறியுங்கள்.</span>
         </p>
       </div>
-      <a href="gallery.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs self-start md:self-auto transition-colors shadow shadow-indigo-600/35">
+      <a href="gallery.html" class="bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs self-start md:self-auto transition-colors shadow shadow-indigo-600/35">
         <span data-lang="si">සියලුම පුවත් බලන්න</span>
         <span data-lang="en">View All News</span>
         <span data-lang="ta">அனைத்து செய்திகளையும் பார்க்க</span>
@@ -482,7 +482,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- News 1 -->
-      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
         <div>
           <div class="h-52 zoom-img-container">
             <img src="assets/news-child-rights.png" alt="Child Rights Protection Day" class="w-full h-full object-cover">
@@ -504,7 +504,7 @@
       </div>
 
       <!-- News 2 -->
-      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
         <div>
           <div class="h-52 zoom-img-container">
             <img src="assets/news-wheelchair.png" alt="Assistive Equipment Distribution" class="w-full h-full object-cover">
@@ -526,7 +526,7 @@
       </div>
 
       <!-- News 3 -->
-      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-200/50 dark:border-slate-800/40">
+      <div class="interactive-card rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm border border-slate-800 dark:border-indigo-900/40">
         <div>
           <div class="h-52 zoom-img-container">
             <img src="assets/news-caregiver.png" alt="Daycare Caregiver Certificate Program" class="w-full h-full object-cover">
@@ -573,14 +573,14 @@
 
     function setSlide(idx) {
       slides[activeSlideIdx].classList.remove('active');
-      dots[activeSlideIdx].classList.remove('bg-white');
-      dots[activeSlideIdx].classList.add('bg-white/40');
+      dots[activeSlideIdx].classList.remove('bg-indigo-100');
+      dots[activeSlideIdx].classList.add('bg-indigo-100/40');
 
       activeSlideIdx = idx;
 
       slides[activeSlideIdx].classList.add('active');
-      dots[activeSlideIdx].classList.remove('bg-white/40');
-      dots[activeSlideIdx].classList.add('bg-white');
+      dots[activeSlideIdx].classList.remove('bg-indigo-100/40');
+      dots[activeSlideIdx].classList.add('bg-indigo-100');
     }
 
     // Auto rotate slides every 5s

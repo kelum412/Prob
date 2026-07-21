@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -81,7 +81,7 @@
   <!-- Gallery Main Section -->
   <main class="max-w-6xl mx-auto px-4 md:px-8 py-16 flex-1 w-full space-y-8">
     <!-- Filters -->
-    <div class="flex flex-wrap gap-2 justify-center border-b dark:border-slate-800 pb-6">
+    <div class="flex flex-wrap gap-2 justify-center border-b dark:border-indigo-900/40 pb-6">
       <button onclick="filterGallery('all')" id="btn-all" class="gal-btn px-4 py-2 bg-indigo-600 text-white text-xs font-bold rounded-lg transition-colors">Show All</button>
       <button onclick="filterGallery('events')" id="btn-events" class="gal-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors">Events</button>
       <button onclick="filterGallery('welfare')" id="btn-welfare" class="gal-btn px-4 py-2 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors">Donation Programs</button>

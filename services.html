@@ -12,42 +12,42 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#2e5a36',
-            brandPink: '#8fae92',
+            brandIndigo: '#fbbf24', // Techvex Gold
+            brandPink: '#0ea5e9',   // Techvex Cyan
             indigo: {
-              50: '#f4f7f4',
-              100: '#e6ede7',
-              200: '#d0ddd2',
-              300: '#adc2b0',
-              400: '#83a287',
-              450: '#8fae92',
-              500: '#5c8464',
-              600: '#2e5a36',
-              650: '#264c2d',
-              700: '#24472c',
-              800: '#1f3b25',
-              900: '#1a3120',
-              950: '#0f1d13',
+              50: '#070d19',        // Midnight navy base
+              100: '#0d1527',       // Lighter navy card
+              200: '#16223f',       // Border navy
+              300: '#0ea5e9',       // Electric cyan
+              400: '#38bdf8',       // Bright cyan
+              450: '#0ea5e9',
+              500: '#2563eb',
+              600: '#fbbf24',       // Vibrant gold/yellow primary brand
+              650: '#fbbf24',
+              700: '#d97706',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#030712',
             },
             rose: {
-              500: '#7fa383',
+              500: '#ef4444',
             },
             pink: {
-              500: '#8fae92',
+              500: '#0ea5e9',       // Mapped to electric cyan
             },
             slate: {
-              50: '#faf9f5',
-              100: '#f3f2eb',
-              200: '#e5e3d7',
-              300: '#cfcbb9',
-              400: '#ab9c87',
-              450: '#8e8977',
-              500: '#707571',
-              600: '#4b5550',
-              800: '#2b362d',
-              850: '#212a23',
-              900: '#1a221c',
-              950: '#0e1411',
+              50: '#070d19',        // Midnight navy base for bg-slate-50
+              100: '#f8fafc',       // Light text for text-slate-100
+              200: '#e2e8f0',       // Light text for text-slate-200
+              300: '#cbd5e1',       // Light text for text-slate-300
+              400: '#94a3b8',       // Paragraph gray text-slate-400
+              450: '#64748b',
+              500: '#cbd5e1',       // text-slate-500
+              600: '#94a3b8',       // text-slate-600
+              800: '#f1f5f9',       // text-slate-800
+              850: '#f8fafc',       // text-slate-850
+              900: '#f8fafc',       // text-slate-900
+              950: '#030712',       // dark:bg-slate-950 base
             }
           }
         }
@@ -80,7 +80,7 @@
 
   <!-- Services Navigation Tabs -->
   <section class="max-w-7xl mx-auto px-4 md:px-8 pt-12">
-    <div class="flex justify-center border-b dark:border-slate-800">
+    <div class="flex justify-center border-b dark:border-indigo-900/40">
       <button onclick="switchTab('welfare-services')" id="tab-welfare" class="px-6 md:px-12 py-4 text-sm md:text-base font-black tracking-wide border-b-4 border-indigo-650 text-indigo-650 dark:text-indigo-400 focus:outline-none transition-all duration-300">
         <span data-lang="si">සමාජ සුබසාධන අංශය</span>
         <span data-lang="en">Social Welfare Division</span>
@@ -99,7 +99,7 @@
     
     <!-- SECTION 1: SOCIAL WELFARE -->
     <div id="welfare-services" class="space-y-8 tab-content">
-      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-slate-800">
+      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-indigo-900/40">
         <span>🤝</span>
         <span data-lang="si">සමාජ සුබසාධන සේවා නාමාවලිය</span>
         <span data-lang="en">Social Welfare Services Directory</span>
@@ -107,7 +107,7 @@
       </h2>
 
       <!-- Service Card 1 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
@@ -123,7 +123,7 @@
             <span data-lang="ta">60 வயதிற்கு மேற்பட்ட முதியவர்களுக்கு முன்னுரிமைகள் மற்றும் சலுகைகளைப் பெறுவதற்கு இந்த அடையாள அட்டை வழங்கப்படுகிறது.</span>
           </p>
           <!-- Accordion Detail -->
-          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+          <div class="border-t pt-4 mt-2 dark:border-indigo-900/40 space-y-3">
             <button onclick="toggleAccordion('w-acc-1')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
               <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
               <span id="w-acc-1-icon">▼</span>
@@ -138,7 +138,7 @@
       </div>
 
       <!-- Service Card 2 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
@@ -154,7 +154,7 @@
             <span data-lang="ta">மாற்றுத்திறனாளிகளின் பொருளாதாரத் தேவைகளைப் பூர்த்தி செய்யும் முகமாக சுயதொழில் ஆரம்பிக்க ரூ. 25,000/- வரையிலான நிதியுதவி மற்றும் உபகரணங்கள் வழங்கல்.</span>
           </p>
           <!-- Accordion Detail -->
-          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+          <div class="border-t pt-4 mt-2 dark:border-indigo-900/40 space-y-3">
             <button onclick="toggleAccordion('w-acc-2')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
               <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
               <span id="w-acc-2-icon">▼</span>
@@ -168,7 +168,7 @@
       </div>
 
       <!-- Service Card 3 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
@@ -189,7 +189,7 @@
 
     <!-- SECTION 2: CHILD CARE & PROBATION -->
     <div id="childcare-services" class="space-y-8 tab-content hidden">
-      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-slate-800">
+      <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-indigo-400 flex items-center gap-2 border-b pb-3 dark:border-indigo-900/40">
         <span>🧸</span>
         <span data-lang="si">ළමාරක්ෂක හා පරිවාස සේවා නාමාවලිය</span>
         <span data-lang="en">Probation & Child Care Services Directory</span>
@@ -197,7 +197,7 @@
       </h2>
 
       <!-- Service Card 1 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
@@ -213,7 +213,7 @@
             <span data-lang="ta">பிள்ளையற்ற தம்பதியினருக்கு நீதிமன்ற உத்தரவின் கீழ் சட்டபூர்வமாக பிள்ளைகளைத் தத்தெடுப்பதற்கான வழிகாட்டல்களை வழங்குதல்.</span>
           </p>
           <!-- Accordion Detail -->
-          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+          <div class="border-t pt-4 mt-2 dark:border-indigo-900/40 space-y-3">
             <button onclick="toggleAccordion('c-acc-1')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
               <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
               <span id="c-acc-1-icon">▼</span>
@@ -227,7 +227,7 @@
       </div>
 
       <!-- Service Card 2 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
@@ -243,7 +243,7 @@
             <span data-lang="ta">தென் மாகாணத்திலுள்ள பகல்நேர சிறுவர் காப்பகங்களை தரம் பிரித்து, பதிவுசெய்து, உரிமங்களை வழங்குதல்.</span>
           </p>
           <!-- Accordion Detail -->
-          <div class="border-t pt-4 mt-2 dark:border-slate-800 space-y-3">
+          <div class="border-t pt-4 mt-2 dark:border-indigo-900/40 space-y-3">
             <button onclick="toggleAccordion('c-acc-2')" class="flex justify-between items-center w-full text-left text-xs font-bold text-indigo-600 dark:text-indigo-455 focus:outline-none">
               <span>📋 VIEW ELIGIBILITY & DOCUMENTS NEEDED</span>
               <span id="c-acc-2-icon">▼</span>
@@ -256,7 +256,7 @@
       </div>
 
       <!-- Service Card 3 -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-indigo-100 dark:bg-indigo-950 border border-slate-800 dark:border-indigo-900/40 rounded-2xl overflow-hidden shadow-sm">
         <div class="p-6 space-y-4">
           <div class="flex justify-between items-start gap-4">
             <h3 class="text-lg font-bold text-slate-800 dark:text-white">
