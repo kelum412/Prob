@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup Scroll-based Shrink effect & progress bar
   initHeaderScroll();
+
+  // Handle service quick redirect parameters
+  initServicesFilter();
 });
 
 /* ==========================================================================
@@ -24,6 +27,7 @@ function initLanguage() {
   const savedLang = localStorage.getItem('site-lang') || 'si'; // Default to Sinhala
   document.documentElement.className = document.documentElement.className.replace(/lang-(si|en|ta)/, '');
   document.documentElement.classList.add(`lang-${savedLang}`);
+  updateDropdownLanguages();
 }
 
 window.toggleLanguage = function(lang) {
@@ -31,11 +35,24 @@ window.toggleLanguage = function(lang) {
   document.documentElement.classList.remove('lang-si', 'lang-en', 'lang-ta');
   document.documentElement.classList.add(`lang-${lang}`);
   
+  updateDropdownLanguages();
+  
   // Re-init header/footer if language toggled dynamically to update static translation text
   injectHeader();
   injectFooter();
   highlightActiveLink();
   setupMobileMenu();
+}
+
+function updateDropdownLanguages() {
+  const currentLang = localStorage.getItem('site-lang') || 'si';
+  const options = document.querySelectorAll('option[data-lang-si], option[data-lang-en], option[data-lang-ta]');
+  options.forEach(opt => {
+    const text = opt.getAttribute(`data-lang-${currentLang}`);
+    if (text) {
+      opt.textContent = text;
+    }
+  });
 }
 
 /* ==========================================================================
@@ -94,7 +111,8 @@ function injectHeader() {
       services: "සේවා",
       downloads: "බාගත කිරීම්",
       gallery: "ඡායාරූප",
-      contact: "සම්බන්ධතා"
+      contact: "සම්බන්ධතා",
+      hotline: "ඇමතුම්: 1929"
     },
     en: {
       dept: "Southern Province Department of Social Welfare, Probation & Child Care Services",
@@ -103,7 +121,8 @@ function injectHeader() {
       services: "Services",
       downloads: "Downloads",
       gallery: "Gallery",
-      contact: "Contact Us"
+      contact: "Contact Us",
+      hotline: "Hotline: 1929"
     },
     ta: {
       dept: "தென் மாகாண சமூக நலன்புரி, நன்னடத்தை, சிறுவர் பராமரிப்புச் சேவைகள் திணைக்களம்",
@@ -112,77 +131,98 @@ function injectHeader() {
       services: "சேவைகள்",
       downloads: "பதிவிறக்கங்கள்",
       gallery: "புகைப்படங்கள்",
-      contact: "தொடர்புகள்"
+      contact: "தொடர்புகள்",
+      hotline: "அழைப்பு: 1929"
     }
   }[currentLang];
 
   const html = `
     <!-- Floating Header Container -->
     <div id="header-container-div" class="fixed top-4 inset-x-4 max-w-7xl mx-auto z-50 px-2 fixed-header-container">
-      <nav class="glass-nav rounded-3xl border shadow-lg px-4 md:px-6 py-4 flex flex-col space-y-3.5 transition-all duration-300 relative overflow-hidden">
+      <nav class="glass-nav rounded-full border shadow-lg px-6 py-3 flex items-center justify-between transition-all duration-300 relative overflow-hidden">
         <!-- Scroll Progress Bar -->
         <div class="scroll-progress-bar"></div>
 
-        <!-- Top Row: Brand & Controls -->
-        <div class="flex justify-between items-center w-full">
-          <!-- Brand Logo & Title -->
-          <a href="index.html" class="flex items-center space-x-4 group mr-4">
-            <div class="relative flex-shrink-0">
-              <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 opacity-25 blur-md group-hover:opacity-45 transition duration-300"></div>
-              <img src="assets/official-logo.png" alt="Logo" class="relative w-12 h-12 transition-all duration-300 group-hover:rotate-6">
+        <!-- DESKTOP HEADER (Large screens) -->
+        <div class="hidden lg:flex items-center justify-between w-full" id="desktop-nav-content">
+          <!-- Left: Brand (Logos & Shorter Name) -->
+          <a href="index.html" class="flex items-center space-x-3.5 group flex-shrink-0">
+            <div class="flex items-center space-x-1.5 relative">
+              <img src="assets/gov-logo.png" alt="Gov Crest" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+              <img src="assets/official-logo.png" alt="Dept Logo" class="h-10 w-10 object-contain transition-all duration-300 group-hover:rotate-6">
             </div>
+            <div class="h-8 w-px bg-slate-300 dark:bg-slate-700"></div>
             <div class="flex flex-col">
-              <h1 class="text-xs sm:text-[13px] md:text-[15px] lg:text-[17px] xl:text-[19px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display transition-colors duration-300 group-hover:text-indigo-650 dark:group-hover:text-indigo-400">
+              <h1 class="text-[10px] xl:text-[11.5px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display max-w-[280px] xl:max-w-[340px] transition-colors duration-300 group-hover:text-[#2e5a36] dark:group-hover:text-[#8fae92]">
                 ${navText.dept}
               </h1>
             </div>
           </a>
 
-          <!-- Controls (Desktop Only) -->
-          <div class="hidden lg:flex items-center space-x-4 flex-shrink-0">
-            <!-- Dark/Light Mode Toggle (Spin Anim) -->
-            <button onclick="toggleTheme()" class="theme-btn p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 dark:text-slate-400" aria-label="Toggle Theme">
-              <svg class="theme-icon-moon w-[20px] h-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-              <svg class="theme-icon-sun w-[20px] h-[20px] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
-             </button>
-
-            <!-- Modern Segmented Pill Language Selector -->
-            <div class="relative flex items-center bg-slate-100/80 dark:bg-slate-800/85 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-700/50 text-[10px] font-extrabold shadow-inner">
-              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-3.5 py-1.5 rounded-full transition-all duration-300 ${currentLang === 'si' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">SI</button>
-              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3.5 py-1.5 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
-              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3.5 py-1.5 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
-            </div>
-          </div>
-
-          <!-- Mobile Controls & Burger -->
-          <div class="flex items-center space-x-2.5 lg:hidden flex-shrink-0">
-            <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400" aria-label="Toggle Theme">
-              <svg class="theme-icon-moon w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-              <svg class="theme-icon-sun w-[18px] h-[18px] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
-            </button>
-            
-            <!-- Mobile Language Segmented Bar -->
-            <div class="flex items-center bg-slate-100/80 dark:bg-slate-850/80 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-800/50 text-[9px] font-extrabold shadow-inner">
-              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-2.5 py-1 rounded-full transition-all ${currentLang === 'si' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">SI</button>
-              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-2.5 py-1 rounded-full transition-all ${currentLang === 'en' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">EN</button>
-              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-2.5 py-1 rounded-full transition-all ${currentLang === 'ta' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">TA</button>
-            </div>
-            
-            <button id="mobile-menu-btn" class="p-2 rounded-xl text-slate-500 dark:text-slate-400 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Bottom Row: Centered Navigation (Desktop Only) -->
-        <div class="hidden lg:flex justify-center w-full nav-divider pt-3.5">
-          <div class="flex items-center space-x-10 text-xs md:text-sm font-semibold tracking-wide">
+          <!-- Center: Menu Links -->
+          <div class="flex-1 flex justify-center space-x-6 xl:space-x-8 text-xs font-bold tracking-wide">
             <a href="index.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="home">${navText.home}</a>
             <a href="about.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="about">${navText.about}</a>
             <a href="services.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="services">${navText.services}</a>
             <a href="downloads.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="downloads">${navText.downloads}</a>
             <a href="gallery.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="gallery">${navText.gallery}</a>
             <a href="contact.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="contact">${navText.contact}</a>
+          </div>
+
+          <!-- Right: Controls & CTA -->
+          <div class="flex items-center space-x-4 flex-shrink-0">
+            <!-- Theme Toggle -->
+            <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors text-slate-500 dark:text-slate-400" aria-label="Toggle Theme">
+              <svg class="theme-icon-moon w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+              <svg class="theme-icon-sun w-[18px] h-[18px] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+            </button>
+
+            <!-- Language selector -->
+            <div class="relative flex items-center bg-slate-100/80 dark:bg-slate-800/85 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-700/50 text-[10px] font-extrabold shadow-inner">
+              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'si' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">SI</button>
+              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
+              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
+            </div>
+
+            <!-- CTA button (Hotline) -->
+            <a href="tel:1929" class="bg-[#2e5a36] hover:bg-[#204227] text-white font-bold px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
+              <span>📞</span>
+              <span>${navText.hotline}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- MOBILE HEADER (Small screens) -->
+        <div class="flex lg:hidden justify-between items-center w-full transition-all duration-300" id="mobile-nav-content">
+          <a href="index.html" class="flex items-center space-x-2 group mr-2">
+            <!-- Dual Logo Representation on Mobile -->
+            <div class="flex items-center space-x-1 flex-shrink-0">
+              <img src="assets/gov-logo.png" alt="Gov Crest" class="w-8 h-8 object-contain">
+              <img src="assets/official-logo.png" alt="Dept Logo" class="w-8 h-8 object-contain">
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-[10px] sm:text-xs font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display transition-colors duration-300">
+                ${navText.dept}
+              </h1>
+            </div>
+          </a>
+
+          <!-- Mobile Controls & Burger -->
+          <div class="flex items-center space-x-2 flex-shrink-0">
+            <button onclick="toggleTheme()" class="theme-btn p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400" aria-label="Toggle Theme">
+              <svg class="theme-icon-moon w-[16px] h-[16px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+              <svg class="theme-icon-sun w-[16px] h-[16px] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+            </button>
+            
+            <div class="flex items-center bg-slate-100/80 dark:bg-slate-850/80 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-800/50 text-[8px] font-extrabold shadow-inner">
+              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'si' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">SI</button>
+              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'en' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">EN</button>
+              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'ta' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">TA</button>
+            </div>
+            
+            <button id="mobile-menu-btn" class="p-1.5 rounded-xl text-slate-500 dark:text-slate-400 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
           </div>
         </div>
       </nav>
@@ -247,19 +287,9 @@ function initHeaderScroll() {
       if (window.scrollY > 20) {
         headerContainerDiv.classList.add('scrolled');
         nav.classList.add('nav-scrolled');
-        const logo = nav.querySelector('img');
-        if (logo) {
-          logo.classList.remove('w-12', 'h-12');
-          logo.classList.add('w-9', 'h-9');
-        }
       } else {
         headerContainerDiv.classList.remove('scrolled');
         nav.classList.remove('nav-scrolled');
-        const logo = nav.querySelector('img');
-        if (logo) {
-          logo.classList.remove('w-9', 'h-9');
-          logo.classList.add('w-12', 'h-12');
-        }
       }
     }
 
@@ -471,3 +501,39 @@ window.animateNumbers = function() {
     updateCount();
   });
 }
+
+/* ==========================================================================
+   Quick Actions Helper Search Redirection
+   ========================================================================== */
+window.handleQuickSearch = function() {
+  const serviceSelect = document.getElementById('quick-service');
+  const divisionSelect = document.getElementById('quick-division');
+  const service = serviceSelect ? serviceSelect.value : '';
+  const division = divisionSelect ? divisionSelect.value : '';
+  
+  let url = 'services.html';
+  if (service || division) {
+    url += `?service=${service}&division=${division}`;
+  }
+  window.location.href = url;
+}
+
+/* ==========================================================================
+   Handle quick redirects from Home Quick Actions
+   ========================================================================== */
+function initServicesFilter() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const service = urlParams.get('service');
+  if (service && window.location.pathname.includes('services.html')) {
+    setTimeout(() => {
+      if (typeof switchTab === 'function') {
+        if (service === 'probation') {
+          switchTab('childcare-services');
+        } else {
+          switchTab('welfare-services');
+        }
+      }
+    }, 100);
+  }
+}
+

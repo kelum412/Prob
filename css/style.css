@@ -6,59 +6,59 @@
   --font-display: 'Outfit', 'Noto Sans Sinhala', sans-serif;
   --font-body: 'Inter', 'Noto Sans Sinhala', sans-serif;
 
-  /* HSL Colors - Modern Indigo/Violet Light Mode */
-  --primary-hue: 238;
-  --primary-sat: 83%;
-  --primary-light: 59%;
+  /* HSL Colors - Modern Forest Green / Cream Light Mode */
+  --primary-hue: 131;
+  --primary-sat: 32%;
+  --primary-light: 27%;
   
-  --secondary-hue: 333;
-  --secondary-sat: 89%;
-  --secondary-light: 52%;
+  --secondary-hue: 128;
+  --secondary-sat: 17%;
+  --secondary-light: 62%;
 
-  --bg-hue: 220;
-  --bg-sat: 25%;
+  --bg-hue: 48;
+  --bg-sat: 20%;
   --bg-light: 97%;
 
-  --card-hue: 0;
-  --card-sat: 0%;
-  --card-light: 100%;
+  --card-hue: 48;
+  --card-sat: 15%;
+  --card-light: 99%;
 
-  --text-hue: 224;
-  --text-sat: 60%;
-  --text-light: 12%;
+  --text-hue: 131;
+  --text-sat: 28%;
+  --text-light: 10%;
 
   --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
   --secondary: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-light));
   --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
   --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
   --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
-  --text-muted: hsl(220, 14%, 46%);
-  --border-color: rgba(99, 102, 241, 0.08);
-  --shadow-sm: 0 2px 4px rgba(99, 102, 241, 0.02);
-  --shadow-md: 0 8px 30px -2px rgba(99, 102, 241, 0.06);
-  --shadow-lg: 0 30px 60px -15px rgba(99, 102, 241, 0.1);
+  --text-muted: hsl(131, 14%, 40%);
+  --border-color: rgba(46, 90, 54, 0.08);
+  --shadow-sm: 0 2px 4px rgba(46, 90, 54, 0.02);
+  --shadow-md: 0 8px 30px -2px rgba(46, 90, 54, 0.06);
+  --shadow-lg: 0 30px 60px -15px rgba(46, 90, 54, 0.1);
 }
 
 :root.dark {
-  /* HSL Colors - Modern Indigo/Violet Dark Mode */
-  --primary-light: 65%;
+  /* HSL Colors - Forest Green Dark Mode */
+  --primary-light: 45%;
   --secondary-light: 60%;
-  --bg-hue: 222;
-  --bg-sat: 47%;
-  --bg-light: 4%;
-  --card-hue: 222;
-  --card-sat: 47%;
-  --card-light: 9%;
-  --text-hue: 210;
-  --text-sat: 20%;
-  --text-light: 98%;
+  --bg-hue: 131;
+  --bg-sat: 15%;
+  --bg-light: 6%;
+  --card-hue: 131;
+  --card-sat: 15%;
+  --card-light: 10%;
+  --text-hue: 128;
+  --text-sat: 15%;
+  --text-light: 95%;
 
   --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
   --secondary: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-light));
   --bg-base: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
   --bg-card: hsl(var(--card-hue), var(--card-sat), var(--card-light));
   --text-main: hsl(var(--text-hue), var(--text-sat), var(--text-light));
-  --text-muted: hsl(217, 10%, 65%);
+  --text-muted: hsl(128, 10%, 65%);
   --border-color: rgba(255, 255, 255, 0.06);
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 30px -2px rgba(0, 0, 0, 0.4);
@@ -343,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 255, 255, 0.7);
   border-color: rgba(99, 102, 241, 0.12);
   box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.05), 0 5px 15px -5px rgba(0, 0, 0, 0.03);
+  gap: 0px; /* use flex spacing or explicit margins */
 }
 
 .dark .glass-nav {
@@ -354,16 +355,68 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation rows spacing transitions */
 .nav-divider {
   border-top: 1px solid rgba(99, 102, 241, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dark .nav-divider {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* When scrolled, collapse brand row and hide divider line */
+.nav-scrolled {
+  gap: 0 !important;
+}
+
+.nav-scrolled #brand-row {
+  opacity: 0;
+  max-height: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .nav-scrolled .nav-divider {
-  margin-top: 0.25rem !important;
-  padding-top: 0.25rem !important;
+  border-top-color: transparent !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#brand-row {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 200px;
+}
+
+/* Brand logos hover effects */
+#brand-row img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dark #brand-row img {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+#brand-row img:hover {
+  transform: scale(1.05);
+}
+
+#brand-row img[alt*="Department Logo"]:hover {
+  transform: scale(1.08) rotate(6deg);
+}
+
+/* Scrolled mini logo & text behavior */
+.scrolled-only {
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-scrolled .scrolled-only {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 /* Commissioner Signature styling */
@@ -416,6 +469,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .zoom-img-container:hover img {
   transform: scale(1.08);
+}
+
+/* Dropdown Options theme styles */
+select option {
+  background-color: #faf9f5;
+  color: #1e3b24;
+}
+.dark select option {
+  background-color: #151c18;
+  color: #faf9f5;
 }
 
 

@@ -12,8 +12,43 @@
       theme: {
         extend: {
           colors: {
-            brandIndigo: '#4f46e5',
-            brandPink: '#ec4899',
+            brandIndigo: '#2e5a36',
+            brandPink: '#8fae92',
+            indigo: {
+              50: '#f4f7f4',
+              100: '#e6ede7',
+              200: '#d0ddd2',
+              300: '#adc2b0',
+              400: '#83a287',
+              450: '#8fae92',
+              500: '#5c8464',
+              600: '#2e5a36',
+              650: '#264c2d',
+              700: '#24472c',
+              800: '#1f3b25',
+              900: '#1a3120',
+              950: '#0f1d13',
+            },
+            rose: {
+              500: '#7fa383',
+            },
+            pink: {
+              500: '#8fae92',
+            },
+            slate: {
+              50: '#faf9f5',
+              100: '#f3f2eb',
+              200: '#e5e3d7',
+              300: '#cfcbb9',
+              400: '#ab9c87',
+              450: '#8e8977',
+              500: '#707571',
+              600: '#4b5550',
+              800: '#2b362d',
+              850: '#212a23',
+              900: '#1a221c',
+              950: '#0e1411',
+            }
           }
         }
       }
@@ -28,32 +63,35 @@
   <header id="global-header"></header>
 
   <!-- Main Hero Section (Dynamic Slider) - Offsets added for floating header (pt-24) -->
-  <section class="slider-container relative h-[500px] md:h-[600px] bg-gradient-to-br from-indigo-950 via-slate-900 to-[#120e2e] overflow-hidden pt-24">
+  <section class="slider-container relative h-[500px] md:h-[600px] bg-gradient-to-br from-[#122818] via-[#0b1b10] to-[#050a06] overflow-hidden pt-24 rounded-b-[40px] md:rounded-b-[60px] border-b border-[#2e5a36]/15">
     <!-- Overlay Wave Design Pattern -->
     <div class="absolute inset-0 bg-cover bg-center opacity-10 gov-pattern pointer-events-none"></div>
+    <!-- Sunburst Radial Glow Overlay (simulating reference UI sunshine) -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(253,224,71,0.15),transparent_50%)] pointer-events-none"></div>
 
     <!-- Slide 1: Social Welfare -->
-    <div class="slide active flex items-center h-full px-6 md:px-16" id="slide-1">
-      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <!-- Content -->
-        <div class="space-y-6 text-white reveal active">
-          <span class="bg-brandPink text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider inline-block shadow-sm">
+    <div class="slide active flex items-center h-full px-6 md:px-16 bg-cover bg-center" style="background-image: url('assets/hero-slide-welfare.png');" id="slide-1">
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#050a06]/95 via-[#050a06]/65 to-[#050a06]/35 z-0"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-3xl space-y-6 text-white reveal active">
+          <span class="bg-[#dbe7dc] text-[#1e3b24] dark:bg-[#1a2b1f] dark:text-[#8fae92] border border-[#2e5a36]/15 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider inline-block shadow-sm">
             <span data-lang="si">සමාජ සුබසාධනය</span>
             <span data-lang="en">Social Welfare</span>
             <span data-lang="ta">சமூக நலன்புரி</span>
           </span>
-          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-[#e8f0e9] to-[#d1e2d3] bg-clip-text text-transparent">
             <span data-lang="si">ජීවිත නංවමු,<br>සෙනෙහස බෙදා දෙමු</span>
             <span data-lang="en">Empowering Lives,<br>Extending Care</span>
             <span data-lang="ta">வாழ்வை மேம்படுத்தி,<br>அன்பை பகிர்வோம்</span>
           </h1>
-          <p class="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed font-sans">
+          <p class="text-slate-300 text-sm md:text-base max-w-xl leading-relaxed font-sans">
             <span data-lang="si">අසරණ වැඩිහිටියන්, විශේෂ අවශ්‍යතා සහිත තැනැත්තන් සහ අවදානමට ලක්වූ පවුල් සඳහා සුබසාධන ආධාර සැපයීම සහ ඔවුන්ගේ ජීවන තත්ත්වය උසස් කිරීම අපගේ අරමුණයි.</span>
             <span data-lang="en">Providing assistance, tools, and social grants for elders, disabled citizens, and low-income families in the Southern Province to uplift their livelihoods.</span>
             <span data-lang="ta">தென் மாகாணத்தில் முதியோர்கள், மாற்றுத்திறனாளிகள் மற்றும் வறிய குடும்பங்களின் வாழ்வாதாரத்தை மேம்படுத்துவதற்காக சமூக நலன்புரி உதவிகள் வழங்குதல்.</span>
           </p>
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="services.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-indigo-650/40">
+            <a href="services.html" class="bg-[#2e5a36] hover:bg-[#204227] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#2e5a36]/20">
               <span data-lang="si">සේවා ගවේෂණය</span>
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
@@ -65,37 +103,32 @@
             </a>
           </div>
         </div>
-        <!-- Image Graphic -->
-        <div class="hidden lg:flex justify-center">
-          <div class="relative w-[420px] h-[340px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 glow-primary bg-slate-800 transition-transform duration-500 hover:scale-105">
-            <img src="assets/hero-welfare.png" alt="Welfare" class="w-full h-full object-cover">
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- Slide 2: Child Probation & Protection -->
-    <div class="slide flex items-center h-full px-6 md:px-16" id="slide-2">
-      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <!-- Content -->
-        <div class="space-y-6 text-white">
-          <span class="bg-indigo-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider inline-block">
+    <div class="slide flex items-center h-full px-6 md:px-16 bg-cover bg-center" style="background-image: url('assets/hero-slide-childcare.png');" id="slide-2">
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#050a06]/95 via-[#050a06]/65 to-[#050a06]/35 z-0"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-3xl space-y-6 text-white">
+          <span class="bg-[#dbe7dc] text-[#1e3b24] dark:bg-[#1a2b1f] dark:text-[#8fae92] border border-[#2e5a36]/15 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider inline-block shadow-sm">
             <span data-lang="si">පරිවාස හා ළමාරක්ෂක සේවා</span>
             <span data-lang="en">Probation & Child Care</span>
             <span data-lang="ta">நன்னடத்தை & சிறுவர் பராமரிப்பு</span>
           </span>
-          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-slate-100 to-rose-200 bg-clip-text text-transparent">
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-[#e8f0e9] to-[#d1e2d3] bg-clip-text text-transparent">
             <span data-lang="si">සෑම දරුවෙකුටම<br>ආරක්ෂිත හෙටක්</span>
             <span data-lang="en">A Safe & Secure<br>Future for Every Child</span>
             <span data-lang="ta">ஒவ்வொரு குழந்தைக்கும்<br>பாதுகாப்பான எதிர்காலம்</span>
           </h1>
-          <p class="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed font-sans">
+          <p class="text-slate-300 text-sm md:text-base max-w-xl leading-relaxed font-sans">
             <span data-lang="si">පළාතේ සෑම දරුවෙකුගේම අයිතිවාසිකම් රැකගැනීම, සුරක්ෂිතභාවය සහ පරිවාස රැකවරණය අවැසි දරුවන් පුනරුත්ථාපනය කොට සමාජගත කිරීමේ උතුම් මෙහෙවර.</span>
             <span data-lang="en">Protecting children, promoting child development, monitoring childcare institutions, and offering probation services to ensure a caring environment for every child.</span>
             <span data-lang="ta">குழந்தைகளைப் பாதுகாத்தல், சிறுவர் அபிவிருத்தியை மேம்படுத்தல் மற்றும் நன்னடத்தை கண்காணிப்பு சேவைகளை தென் மாகாணத்தில் வழங்குதல்.</span>
           </p>
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="services.html" class="bg-brandPink hover:bg-rose-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-pink-500/40">
+            <a href="services.html" class="bg-[#8fae92] hover:bg-[#7fa383] text-[#122015] font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#8fae92]/30">
               <span data-lang="si">සේවා ගවේෂණය</span>
               <span data-lang="en">Explore Services</span>
               <span data-lang="ta">சேவைகளை ஆராய்க</span>
@@ -107,24 +140,125 @@
             </a>
           </div>
         </div>
-        <!-- Image Graphic -->
-        <div class="hidden lg:flex justify-center">
-          <div class="relative w-[420px] h-[340px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 glow-secondary bg-slate-800 transition-transform duration-500 hover:scale-105">
-            <img src="assets/hero-childcare.png" alt="Childcare" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- Slide 3: Elderly Care -->
+    <div class="slide flex items-center h-full px-6 md:px-16 bg-cover bg-center" style="background-image: url('assets/hero-slide-eldercare.png');" id="slide-3">
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#050a06]/95 via-[#050a06]/65 to-[#050a06]/35 z-0"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-3xl space-y-6 text-white">
+          <span class="bg-[#dbe7dc] text-[#1e3b24] dark:bg-[#1a2b1f] dark:text-[#8fae92] border border-[#2e5a36]/15 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider inline-block shadow-sm">
+            <span data-lang="si">වැඩිහිටි සුබසාධන</span>
+            <span data-lang="en">Elderly Welfare</span>
+            <span data-lang="ta">முதியோர் நலன்</span>
+          </span>
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-[#e8f0e9] to-[#d1e2d3] bg-clip-text text-transparent">
+            <span data-lang="si">වැඩිහිටි පරපුරට<br>ගෞරවනීය සත්කාරය</span>
+            <span data-lang="en">Dignified Care<br>for Our Elders</span>
+            <span data-lang="ta">முதியோர்களுக்கான<br>மதிப்புமிக்க பராமரிப்பு</span>
+          </h1>
+          <p class="text-slate-300 text-sm md:text-base max-w-xl leading-relaxed font-sans">
+            <span data-lang="si">වැඩිහිටි නිවාස නියාමනය, දිවා සුරැකුම් මධ්‍යස්ථාන ප්‍රවර්ධනය සහ වැඩිහිටි කමිටු මඟින් ක්‍රියාකාරී වැඩිහිටි ජීවිතයක් සැලසීම.</span>
+            <span data-lang="en">Regulating care homes, sponsoring day centers, and empowering senior citizen committees to ensure active, healthy, and happy retirement years.</span>
+            <span data-lang="ta">முதியோர் இல்லங்களை முறைப்படுத்துதல் மற்றும் முதியோர் குழுக்களை வலுவூட்டுவதன் மூலம் அவர்கள் නිம்மதியான ஓய்வுகாலத்தை கழிக்க உதவுதல்.</span>
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="services.html" class="bg-[#2e5a36] hover:bg-[#204227] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#2e5a36]/20">
+              <span data-lang="si">සේවා ගවේෂණය</span>
+              <span data-lang="en">Explore Services</span>
+              <span data-lang="ta">சேவைகளை ஆராய்க</span>
+            </a>
+            <a href="downloads.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+              <span data-lang="si">අයදුම්පත් බාගත කරන්න</span>
+              <span data-lang="en">Download Applications</span>
+              <span data-lang="ta">பதிவிறக்கங்கள்</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Community Development & Support -->
+    <div class="slide flex items-center h-full px-6 md:px-16 bg-cover bg-center" style="background-image: url('assets/hero-slide-community.png');" id="slide-4">
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#050a06]/95 via-[#050a06]/65 to-[#050a06]/35 z-0"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-3xl space-y-6 text-white">
+          <span class="bg-[#dbe7dc] text-[#1e3b24] dark:bg-[#1a2b1f] dark:text-[#8fae92] border border-[#2e5a36]/15 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider inline-block shadow-sm">
+            <span data-lang="si">ප්‍රජා සවිබල ගැන්වීම</span>
+            <span data-lang="en">Community Empowerment</span>
+            <span data-lang="ta">சமூக வலுவூட்டல்</span>
+          </span>
+          <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight font-display bg-gradient-to-r from-white via-[#e8f0e9] to-[#d1e2d3] bg-clip-text text-transparent">
+            <span data-lang="si">සමෘද්ධිමත් සහ<br>සහයෝගී සමාජයක්</span>
+            <span data-lang="en">A Prosperous &<br>Inclusive Community</span>
+            <span data-lang="ta">வளமாற்று மற்றும்<br>உள்ளடக்கிய சமுதாயம்</span>
+          </h1>
+          <p class="text-slate-300 text-sm md:text-base max-w-xl leading-relaxed font-sans">
+            <span data-lang="si">වෘත්තීය පුහුණු ශිෂ්‍යත්ව, ස්වයං රැකියා ආධාර සහ ප්‍රජා සංවර්ධන වැඩසටහන් මඟින් පළාතේ ජනතාවගේ ආර්ථික ශක්තිය ඉහළ නැංවීම.</span>
+            <span data-lang="en">Providing vocational training scholarships, self-employment toolkits, and support programs to build strong, independent families in the Southern Province.</span>
+            <span data-lang="ta">தொழில் பயிற்சி புலமைப்பரிசில்கள் மற்றும் சுயதொழில் உபகரணங்களை வழங்குவதன் மூலம் தென் மாகாணத்தில் சுயாதீனமான குடும்பங்களை உருவாக்குதல்.</span>
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="services.html" class="bg-[#8fae92] hover:bg-[#7fa383] text-[#122015] font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#8fae92]/30">
+              <span data-lang="si">සේවා ගවේෂණය</span>
+              <span data-lang="en">Explore Services</span>
+              <span data-lang="ta">சேவைகளை ஆராய்க</span>
+            </a>
+            <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 backdrop-blur-sm">
+              <span data-lang="si">සම්බන්ධ වන්න</span>
+              <span data-lang="en">Get in Touch</span>
+              <span data-lang="ta">தொடர்புகொள்ள</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Slider Dots Controls -->
-    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
       <button onclick="setSlide(0)" id="dot-0" class="w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
       <button onclick="setSlide(1)" id="dot-1" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
+      <button onclick="setSlide(2)" id="dot-2" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
+      <button onclick="setSlide(3)" id="dot-3" class="w-3 h-3 rounded-full bg-white/40 transition-all duration-300"></button>
     </div>
   </section>
 
+  <!-- Floating Helplines Bar (Placed outside to prevent clipping by overflow-hidden) -->
+  <div class="relative -mt-10 md:-mt-12 max-w-3xl mx-auto px-4 z-40">
+    <div class="bg-[#faf9f5] dark:bg-[#151c18] rounded-[28px] shadow-2xl border border-[#2e5a36]/15 dark:border-[#2e5a36]/30 p-3.5 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-center">
+      <!-- Search Field 1: WhatsApp Helpline -->
+      <a href="https://wa.me/94760763533" target="_blank" class="flex items-center space-x-3 px-6 py-3.5 bg-white dark:bg-[#0e1411] rounded-2xl border border-slate-200/60 dark:border-slate-850 hover:border-green-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
+        <span class="text-xl">💬</span>
+        <div class="flex flex-col">
+          <span class="text-[9px] uppercase font-bold text-slate-450 dark:text-slate-500 tracking-wider">
+            <span data-lang="si">වට්ස්ඇප් හදිසි සහන</span>
+            <span data-lang="en">WhatsApp Helpline</span>
+            <span data-lang="ta">வாட்ஸ்அப் உதவி</span>
+          </span>
+          <span class="text-sm font-black text-green-600 dark:text-green-400">076 076 3533</span>
+        </div>
+      </a>
+
+      <!-- Search Field 2: 1929 Child Helpline -->
+      <a href="tel:1929" class="flex items-center space-x-3 px-6 py-3.5 bg-white dark:bg-[#0e1411] rounded-2xl border border-slate-200/60 dark:border-slate-850 hover:border-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm w-full">
+        <span class="text-xl">📞</span>
+        <div class="flex flex-col">
+          <span class="text-[9px] uppercase font-bold text-slate-450 dark:text-slate-500 tracking-wider">
+            <span data-lang="si">ළමා හදිසි ඇමතුම</span>
+            <span data-lang="en">Child Helpline</span>
+            <span data-lang="ta">சிறுவர் உதவிக்குறிப்பு</span>
+          </span>
+          <span class="text-sm font-black text-red-655 dark:text-red-400">1929 (Toll-Free)</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <!-- Quick Action & Stats Dashboard -->
-  <section class="max-w-7xl mx-auto px-4 md:px-8 -mt-10 relative z-30">
+  <section class="max-w-7xl mx-auto px-4 md:px-8 mt-8 md:mt-12 relative z-30">
     <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-850 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
       <div class="space-y-1">
         <span class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 counter-val" data-target="2500">0+</span>
@@ -424,8 +558,18 @@
   <!-- Slider logic -->
   <script>
     let activeSlideIdx = 0;
-    const slides = [document.getElementById('slide-1'), document.getElementById('slide-2')];
-    const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
+    const slides = [
+      document.getElementById('slide-1'),
+      document.getElementById('slide-2'),
+      document.getElementById('slide-3'),
+      document.getElementById('slide-4')
+    ];
+    const dots = [
+      document.getElementById('dot-0'),
+      document.getElementById('dot-1'),
+      document.getElementById('dot-2'),
+      document.getElementById('dot-3')
+    ];
 
     function setSlide(idx) {
       slides[activeSlideIdx].classList.remove('active');
@@ -439,11 +583,11 @@
       dots[activeSlideIdx].classList.add('bg-white');
     }
 
-    // Auto rotate slides every 6s
+    // Auto rotate slides every 5s
     setInterval(() => {
       let nextIdx = (activeSlideIdx + 1) % slides.length;
       setSlide(nextIdx);
-    }, 6000);
+    }, 5000);
 
     // Trigger statistics counts when scrolling near
     let counted = false;
