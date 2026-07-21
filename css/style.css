@@ -473,12 +473,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dropdown Options theme styles */
 select option {
-  background-color: #faf9f5;
-  color: #1e3b24;
+  background-color: #0d1527;
+  color: #f8fafc;
 }
 .dark select option {
-  background-color: #151c18;
-  color: #faf9f5;
+  background-color: #030712;
+  color: #f8fafc;
 }
 
 

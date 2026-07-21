@@ -153,7 +153,7 @@ function injectHeader() {
             </div>
             <div class="h-8 w-px bg-slate-300 dark:bg-slate-700"></div>
             <div class="flex flex-col">
-              <h1 class="text-[10px] xl:text-[11.5px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display max-w-[280px] xl:max-w-[340px] transition-colors duration-300 group-hover:text-[#2e5a36] dark:group-hover:text-[#8fae92]">
+              <h1 class="text-[10px] xl:text-[11.5px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display max-w-[280px] xl:max-w-[340px] transition-colors duration-300 group-hover:text-[#fbbf24] dark:group-hover:text-[#0ea5e9]">
                 ${navText.dept}
               </h1>
             </div>
@@ -179,13 +179,13 @@ function injectHeader() {
 
             <!-- Language selector -->
             <div class="relative flex items-center bg-slate-100/80 dark:bg-slate-800/85 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-700/50 text-[10px] font-extrabold shadow-inner">
-              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'si' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">SI</button>
-              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
-              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
+              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'si' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">SI</button>
+              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
+              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
             </div>
 
             <!-- CTA button (Hotline) -->
-            <a href="tel:1929" class="bg-[#2e5a36] hover:bg-[#204227] text-white font-bold px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
+            <a href="tel:1929" class="bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-bold px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
               <span>📞</span>
               <span>${navText.hotline}</span>
             </a>
@@ -215,9 +215,9 @@ function injectHeader() {
             </button>
             
             <div class="flex items-center bg-slate-100/80 dark:bg-slate-850/80 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-800/50 text-[8px] font-extrabold shadow-inner">
-              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'si' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">SI</button>
-              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'en' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">EN</button>
-              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'ta' ? 'bg-[#2e5a36] text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'}">TA</button>
+              <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'si' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 dark:text-slate-400'}">SI</button>
+              <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'en' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 dark:text-slate-400'}">EN</button>
+              <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-2 py-0.5 rounded-full transition-all ${currentLang === 'ta' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 dark:text-slate-400'}">TA</button>
             </div>
             
             <button id="mobile-menu-btn" class="p-1.5 rounded-xl text-slate-500 dark:text-slate-400 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
@@ -230,7 +230,7 @@ function injectHeader() {
 
     <!-- Mobile Drawer Menu (Slides from the right) -->
     <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-slate-950/60 backdrop-blur-sm flex justify-end">
-      <div class="w-80 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl h-full p-6 shadow-2xl flex flex-col justify-between border-l border-slate-200/50 dark:border-slate-800/50">
+      <div class="w-80 bg-[#0d1527]/95 dark:bg-slate-900/90 backdrop-blur-xl h-full p-6 shadow-2xl flex flex-col justify-between border-l border-slate-200/50 dark:border-slate-800/50">
         <div>
           <div class="flex justify-between items-center mb-8 border-b pb-4 border-slate-200/50 dark:border-slate-800/50">
             <span class="font-extrabold text-indigo-650 dark:text-indigo-400 text-sm tracking-wider uppercase font-display">Navigation Menu</span>
