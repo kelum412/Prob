@@ -160,7 +160,7 @@ function injectHeader() {
           </a>
 
           <!-- Center: Menu Links -->
-          <div class="flex-1 flex justify-center space-x-5 xl:space-x-7 text-[13.5px] font-bold tracking-wide">
+          <div class="flex-1 flex justify-center space-x-6 xl:space-x-8 text-[13.5px] font-bold tracking-wide">
             <a href="index.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="home">${navText.home}</a>
             <a href="about.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="about">${navText.about}</a>
             <a href="services.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="services">${navText.services}</a>
@@ -169,7 +169,7 @@ function injectHeader() {
             <a href="contact.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="contact">${navText.contact}</a>
           </div>
 
-          <!-- Right: Controls & CTA -->
+          <!-- Right: Controls -->
           <div class="flex items-center space-x-4 flex-shrink-0">
             <!-- Theme Toggle -->
             <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors text-slate-500 dark:text-slate-400" aria-label="Toggle Theme">
@@ -183,12 +183,6 @@ function injectHeader() {
               <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
               <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
             </div>
-
-            <!-- CTA button (Hotline) -->
-            <a href="tel:1929" class="bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-bold px-4.5 py-2.5 rounded-full text-[13px] uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
-              <span>📞</span>
-              <span>${navText.hotline}</span>
-            </a>
           </div>
         </div>
 
