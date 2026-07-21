@@ -322,10 +322,10 @@ function injectFooter() {
       childHotline: "පරිවාස හා ළමාරක්ෂක හදිසි ඇමතුම: 1929",
       elderHotline: "වැඩිහිටි උපකාරක සේවය: 1920",
       contactUs: "අපව සම්බන්ධ කරගන්න",
-      address: "ලිපිනය: බාලදක්ෂ මාවත, ගාල්ල, ශ්‍රී ලංකාව",
-      phone: "දුරකථන: +94 (0) 91 223 4235",
-      fax: "ෆැක්ස්: +94 (0) 91 223 4236",
-      email: "විද්‍යුත් තැපෑල: info@probation.sp.gov.lk",
+      address: "ලිපිනය: කිතුලම්පිටිය, ගාල්ල, ශ්‍රී ලංකාව",
+      phone: "දුරකථන: +94 (0) 91 224 8259",
+      fax: "ෆැක්ස්: +94 (0) 91 222 6573",
+      email: "විද්‍යුත් තැපෑල: probationdepsp@gmail.com",
       quickLinks: "ක්ෂණික සබැඳි",
       terms: "නියමයන් සහ කොන්දේසි",
       rights: "සියලුම හිමිකම් ඇවිරිණි."
@@ -337,10 +337,10 @@ function injectFooter() {
       childHotline: "Child Protection Hotline: 1929",
       elderHotline: "Elders Assistance Desk: 1920",
       contactUs: "Contact Us",
-      address: "Address: Scouts Road, Galle, Sri Lanka",
-      phone: "Phone: +94 (0) 91 223 4235",
-      fax: "Fax: +94 (0) 91 223 4236",
-      email: "Email: info@probation.sp.gov.lk",
+      address: "Address: Kithulampitiya, Galle, Sri Lanka",
+      phone: "Phone: +94 (0) 91 224 8259",
+      fax: "Fax: +94 (0) 91 222 6573",
+      email: "Email: probationdepsp@gmail.com",
       quickLinks: "Quick Links",
       terms: "Terms & Conditions",
       rights: "All Rights Reserved."
@@ -352,10 +352,10 @@ function injectFooter() {
       childHotline: "சிறுவர் பாதுகாப்பு அவசர அழைப்பு: 1929",
       elderHotline: "முதியோர் உதவி மையம்: 1920",
       contactUs: "தொடர்பு கொள்ள",
-      address: "முகவரி: சாரணர் வீதி, காலி, இலங்கை",
-      phone: "தொலைபேசி: +94 (0) 91 223 4235",
-      fax: "தொலைநகல்: +94 (0) 91 223 4236",
-      email: "மின்னஞ்சல்: info@probation.sp.gov.lk",
+      address: "முகவரி: கிதுலம்பிட்டிய, காலி, இலங்கை",
+      phone: "தொலைபேசி: +94 (0) 91 224 8259",
+      fax: "தொலைநகல்: +94 (0) 91 222 6573",
+      email: "மின்னஞ்சல்: probationdepsp@gmail.com",
       quickLinks: "விரைவு இணைப்புகள்",
       terms: "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
       rights: "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
@@ -416,7 +416,7 @@ function injectFooter() {
             <li class="flex items-start gap-1.5">📍 <span>${footerText.address}</span></li>
             <li class="flex items-center gap-1.5">📞 <span>${footerText.phone}</span></li>
             <li class="flex items-center gap-1.5">📠 <span>${footerText.fax}</span></li>
-            <li class="flex items-center gap-1.5">✉️ <a href="mailto:info@probation.sp.gov.lk" class="hover:underline">${footerText.email}</a></li>
+            <li class="flex items-center gap-1.5">✉️ <a href="mailto:probationdepsp@gmail.com" class="hover:underline">${footerText.email}</a></li>
           </ul>
         </div>
       </div>
