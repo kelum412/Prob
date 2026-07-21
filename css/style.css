@@ -72,6 +72,19 @@ html {
   background-color: var(--bg-base);
   color: var(--text-main);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px; /* Base for mobile */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17.5px; /* Tablet view scaling */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18.5px; /* Desktop view scaling for high visibility */
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
