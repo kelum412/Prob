@@ -153,20 +153,20 @@ function injectHeader() {
             </div>
             <div class="h-8 w-px bg-slate-300 dark:bg-slate-700"></div>
             <div class="flex flex-col">
-              <h1 class="text-[10px] xl:text-[11.5px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display max-w-[280px] xl:max-w-[340px] transition-colors duration-300 group-hover:text-[#fbbf24] dark:group-hover:text-[#0ea5e9]">
+              <h1 class="text-[12px] xl:text-[14px] font-black text-slate-800 dark:text-white leading-tight tracking-tight font-display max-w-[320px] xl:max-w-[400px] transition-colors duration-300 group-hover:text-[#fbbf24] dark:group-hover:text-[#0ea5e9]">
                 ${navText.dept}
               </h1>
             </div>
           </a>
 
           <!-- Center: Menu Links -->
-          <div class="flex-1 flex justify-center space-x-6 xl:space-x-8 text-xs font-bold tracking-wide">
-            <a href="index.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="home">${navText.home}</a>
-            <a href="about.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="about">${navText.about}</a>
-            <a href="services.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="services">${navText.services}</a>
-            <a href="downloads.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="downloads">${navText.downloads}</a>
-            <a href="gallery.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="gallery">${navText.gallery}</a>
-            <a href="contact.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1.5" data-nav="contact">${navText.contact}</a>
+          <div class="flex-1 flex justify-center space-x-5 xl:space-x-7 text-[13.5px] font-bold tracking-wide">
+            <a href="index.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="home">${navText.home}</a>
+            <a href="about.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="about">${navText.about}</a>
+            <a href="services.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="services">${navText.services}</a>
+            <a href="downloads.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="downloads">${navText.downloads}</a>
+            <a href="gallery.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="gallery">${navText.gallery}</a>
+            <a href="contact.html" class="nav-link text-slate-650 dark:text-slate-300 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors py-1" data-nav="contact">${navText.contact}</a>
           </div>
 
           <!-- Right: Controls & CTA -->
@@ -178,14 +178,14 @@ function injectHeader() {
             </button>
 
             <!-- Language selector -->
-            <div class="relative flex items-center bg-slate-100/80 dark:bg-slate-800/85 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-700/50 text-[10px] font-extrabold shadow-inner">
+            <div class="relative flex items-center bg-slate-100/80 dark:bg-slate-800/85 rounded-full p-0.5 border border-slate-200/50 dark:border-slate-700/50 text-[11.5px] font-extrabold shadow-inner">
               <button onclick="toggleLanguage('si')" data-target-lang="si" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'si' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">SI</button>
               <button onclick="toggleLanguage('en')" data-target-lang="en" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'en' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">EN</button>
               <button onclick="toggleLanguage('ta')" data-target-lang="ta" class="lang-btn px-3 py-1 rounded-full transition-all duration-300 ${currentLang === 'ta' ? 'bg-[#fbbf24] text-slate-950 font-bold shadow-sm' : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white'}">TA</button>
             </div>
 
             <!-- CTA button (Hotline) -->
-            <a href="tel:1929" class="bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-bold px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
+            <a href="tel:1929" class="bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-bold px-4.5 py-2.5 rounded-full text-[13px] uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center space-x-1.5">
               <span>📞</span>
               <span>${navText.hotline}</span>
             </a>
@@ -363,7 +363,7 @@ function injectFooter() {
   }[currentLang];
 
   const html = `
-    <footer class="bg-[#030712] text-slate-300 border-t border-slate-800/80 pt-20 pb-10 px-4 md:px-8 font-sans relative overflow-hidden">
+    <footer class="bg-[#030712] text-slate-350 border-t border-slate-800/80 pt-20 pb-10 px-4 md:px-8 font-sans relative overflow-hidden">
       <!-- Glow background decoration -->
       <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/5 rounded-full filter blur-[100px] pointer-events-none"></div>
       <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-[100px] pointer-events-none"></div>
@@ -372,13 +372,13 @@ function injectFooter() {
         <!-- Dept Identity -->
         <div class="space-y-5">
           <div class="flex items-center space-x-3.5">
-            <img src="assets/official-logo.png" alt="Logo" class="w-12 h-12 brightness-110 drop-shadow-[0_0_10px_rgba(250,191,36,0.15)]">
+            <img src="assets/official-logo.png" alt="Logo" class="w-14 h-14 brightness-110 drop-shadow-[0_0_10px_rgba(250,191,36,0.15)]">
             <div>
-              <p class="text-[9px] uppercase text-[#fbbf24] font-black tracking-widest leading-none mb-1">${footerText.govName}</p>
-              <h3 class="text-xs md:text-sm font-black text-white tracking-wide leading-snug font-display">${footerText.dept}</h3>
+              <p class="text-[10.5px] uppercase text-[#fbbf24] font-black tracking-widest leading-none mb-1">${footerText.govName}</p>
+              <h3 class="text-sm md:text-[15px] font-black text-white tracking-wide leading-snug font-display">${footerText.dept}</h3>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed font-sans pt-2">
+          <p class="text-[13px] text-slate-400 leading-relaxed font-sans pt-2">
             ${currentLang === 'si' 
               ? "දකුණු පළාතේ සෑම දරුවෙකුගේම සුරක්ෂිතභාවය තහවුරු කිරීමට සහ ජ්‍යෙෂ්ඨ පුරවැසියන් ඇතුළු සමස්ත ප්‍රජාවගේ සුබසාධනය නැංවීමට කැපවී සිටිමු."
               : currentLang === 'ta'
@@ -389,13 +389,13 @@ function injectFooter() {
 
         <!-- Emergency Hotlines (Highlight Card) -->
         <div class="bg-[#0d1527] border border-[#0ea5e9]/20 p-6 rounded-3xl space-y-4 shadow-xl shadow-black/20">
-          <h4 class="text-[10px] uppercase tracking-widest text-[#0ea5e9] font-black font-display">${footerText.hotlineTitle}</h4>
+          <h4 class="text-[11px] uppercase tracking-widest text-[#0ea5e9] font-black font-display">${footerText.hotlineTitle}</h4>
           <ul class="space-y-3.5 pt-1">
-            <li class="flex items-center space-x-3 text-xs bg-red-500/10 border border-red-500/20 p-2.5 rounded-xl">
+            <li class="flex items-center space-x-3 text-[13px] bg-red-500/10 border border-red-500/20 p-2.5 rounded-xl">
               <span class="w-2 h-2 rounded-full bg-red-500 inline-block animate-ping"></span>
               <strong class="text-red-200">${footerText.childHotline}</strong>
             </li>
-            <li class="flex items-center space-x-3 text-xs bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl">
+            <li class="flex items-center space-x-3 text-[13px] bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl">
               <span class="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
               <strong class="text-amber-200">${footerText.elderHotline}</strong>
             </li>
@@ -404,8 +404,8 @@ function injectFooter() {
 
         <!-- Quick Links -->
         <div class="space-y-4">
-          <h4 class="text-xs uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.quickLinks}</h4>
-          <ul class="space-y-2.5 text-xs text-slate-400 font-sans">
+          <h4 class="text-sm uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.quickLinks}</h4>
+          <ul class="space-y-2.5 text-[13.5px] text-slate-400 font-sans">
             <li><a href="about.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">අප ගැන</span><span data-lang="en">About Us</span><span data-lang="ta">எங்களைப் பற்றி</span></a></li>
             <li><a href="services.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">සේවා</span><span data-lang="en">Our Services</span><span data-lang="ta">சேவைகள்</span></a></li>
             <li><a href="downloads.html" class="hover:text-[#fbbf24] transition-colors flex items-center gap-2">➔ <span data-lang="si">බාගත කිරීම්</span><span data-lang="en">Applications & Forms</span><span data-lang="ta">பதிவிறக்கங்கள்</span></a></li>
@@ -415,8 +415,8 @@ function injectFooter() {
 
         <!-- Direct Contact Details -->
         <div class="space-y-4">
-          <h4 class="text-xs uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.contactUs}</h4>
-          <ul class="space-y-3 text-xs text-slate-450 font-sans">
+          <h4 class="text-sm uppercase tracking-wider text-white font-extrabold font-display border-b border-slate-800 pb-2">${footerText.contactUs}</h4>
+          <ul class="space-y-3 text-[13.5px] text-slate-400 font-sans">
             <li class="flex items-start gap-2.5">📍 <span class="leading-normal">${footerText.address}</span></li>
             <li class="flex items-center gap-2.5">📞 <span class="leading-normal">${footerText.phone}</span></li>
             <li class="flex items-center gap-2.5">📠 <span class="leading-normal">${footerText.fax}</span></li>
@@ -426,12 +426,12 @@ function injectFooter() {
       </div>
 
       <!-- Copyright & Credits -->
-      <div class="max-w-7xl mx-auto border-t border-slate-800/80 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 relative z-10">
+      <div class="max-w-7xl mx-auto border-t border-slate-800/80 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-[12.5px] text-slate-500 relative z-10">
         <p class="text-center md:text-left">© 2026 ${footerText.dept}. ${footerText.rights}</p>
         <div class="flex space-x-4 mt-4 md:mt-0 font-sans">
           <a href="#" class="hover:underline hover:text-slate-400">${footerText.terms}</a>
           <span class="text-slate-800">|</span>
-          <span class="text-slate-450">Designed for Southern Province Department</span>
+          <span class="text-slate-450">Designed by Kelum Chamara Lakmal</span>
         </div>
       </div>
     </footer>
