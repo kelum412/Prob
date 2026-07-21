@@ -183,10 +183,10 @@
         <input type="text" id="search-input" onkeyup="filterOffices()" placeholder="Search office e.g. Galle, Matara..." class="w-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 px-4 py-2.5 rounded-lg border border-slate-800 dark:border-indigo-900/40 focus:outline-none focus:border-indigo-500 text-sm font-sans">
       </div>
       <div class="flex gap-2">
-        <button onclick="filterDistrict('all')" class="district-btn px-4 py-2.5 bg-indigo-600 text-white text-xs font-bold rounded-lg transition-colors shadow-sm" id="btn-all">All</button>
-        <button onclick="filterDistrict('galle')" class="district-btn px-4 py-2.5 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors" id="btn-galle">Galle</button>
-        <button onclick="filterDistrict('matara')" class="district-btn px-4 py-2.5 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors" id="btn-matara">Matara</button>
-        <button onclick="filterDistrict('hambantota')" class="district-btn px-4 py-2.5 bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors" id="btn-hambantota">Hambantota</button>
+        <button onclick="filterDistrict('all')" class="district-btn px-4 py-2.5 bg-[#fbbf24] text-slate-950 font-extrabold text-xs rounded-lg transition-all shadow-sm border border-[#fbbf24]" id="btn-all">All</button>
+        <button onclick="filterDistrict('galle')" class="district-btn px-4 py-2.5 bg-[#0d1527] border border-slate-800 text-slate-300 hover:bg-[#16223f] hover:text-white text-xs font-bold rounded-lg transition-all" id="btn-galle">Galle</button>
+        <button onclick="filterDistrict('matara')" class="district-btn px-4 py-2.5 bg-[#0d1527] border border-slate-800 text-slate-300 hover:bg-[#16223f] hover:text-white text-xs font-bold rounded-lg transition-all" id="btn-matara">Matara</button>
+        <button onclick="filterDistrict('hambantota')" class="district-btn px-4 py-2.5 bg-[#0d1527] border border-slate-800 text-slate-300 hover:bg-[#16223f] hover:text-white text-xs font-bold rounded-lg transition-all" id="btn-hambantota">Hambantota</button>
       </div>
     </div>
 
@@ -460,16 +460,17 @@
     function filterDistrict(district) {
       currentDistrictFilter = district;
       
-      // Update button colors
+      // Reset all buttons to inactive styling
       const buttons = document.querySelectorAll('.district-btn');
       buttons.forEach(btn => {
-        btn.classList.remove('bg-indigo-600', 'text-white');
-        btn.classList.add('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
+        btn.className = "district-btn px-4 py-2.5 bg-[#0d1527] border border-slate-800 text-slate-300 hover:bg-[#16223f] hover:text-white text-xs font-bold rounded-lg transition-all";
       });
 
+      // Apply active style to selected button
       const selectedBtn = document.getElementById(`btn-${district}`);
-      selectedBtn.classList.remove('bg-slate-100', 'dark:bg-slate-850', 'text-slate-800', 'dark:text-slate-200');
-      selectedBtn.classList.add('bg-indigo-600', 'text-white');
+      if (selectedBtn) {
+        selectedBtn.className = "district-btn px-4 py-2.5 bg-[#fbbf24] text-slate-950 font-extrabold text-xs rounded-lg transition-all shadow-sm border border-[#fbbf24]";
+      }
 
       filterOffices();
     }
